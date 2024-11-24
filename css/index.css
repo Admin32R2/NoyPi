@@ -1,0 +1,147 @@
+/* General Reset */
+@font-face {
+    font-family: 'CustomFont'; /* Match this name to font-family usage */
+    src: url("/maragsa-font_john-david-maza_150620/Maragsâ.otf") format('opentype'); /* Correct file path */
+    font-weight: normal; /* Optional: Define weight */
+    font-style: normal; /* Optional: Define style */
+}
+
+@font-face {
+    font-family: 'Lemon'; /* Match this name to font-family usage */
+    src: url("/lemon_tuesday/Lemon Tuesday.otf") format('opentype'); /* Correct file path */
+    font-weight: normal; /* Optional: Define weight */
+    font-style: normal; /* Optional: Define style */
+}
+
+@font-face {
+    font-family: 'Poppins'; /* Match this name to font-family usage */
+    src: url("/maragsa-font_john-david-maza_150620/Maragsâ.otf") format('opentype'); /* Correct file path */
+    font-weight: normal; /* Optional: Define weight */
+    font-style: normal; /* Optional: Define style */
+}
+
+body {
+    margin: 0;
+    font-family: 'Lemon';/* Match the @font-face name */
+    background-color: white;
+    align-items: center;
+    
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: gray;
+    padding: 20px 0;
+    font-family: sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.splice-text {
+    font-size: 12rem;
+    font-weight: bold;
+    margin-top: -185px;
+    /* text-transform: uppercase; */
+    color: transparent; /* Make the inside transparent */
+    -webkit-text-stroke: 1px #afafaf; /* Creates the black outline */
+    text-align: center;
+    position: relative;
+    line-height: 1.5;
+    word-spacing: 20px;
+    letter-spacing: 65px;
+    font-style: 'Lemon';
+}
+
+.splice-text::before,
+.splice-text::after {
+    content: attr(data-text); /* Dynamically reflect the main text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.splice-text::before {
+
+    transform: translate( 75px, 155px); /* Slice upwards */
+    color: #c9c9c9; /* Light color for one "slice" */
+    -webkit-text-stroke: 0;
+    font-size: 11.5;
+   
+}
+
+.splice-text::after {
+    transform: translate(50px, 135px); /* Slice downwards */
+    /*  color: rgb(255, 255, 255); */ /* Slightly darker slice color */
+     background: transparent;
+    
+   
+}
+
+
+/* //////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////// */
+
+.splice-text02 {
+    font-size: 12rem;
+    font-weight: bold;
+    margin-top: 255px;
+    /* text-transform: uppercase; */
+    color: transparent; /* Make the inside transparent */
+    -webkit-text-stroke: 1px #afafaf; /* Creates the black outline */
+    text-align: center;
+    position: relative;
+    line-height: 1.5;
+    word-spacing: 20px;
+    letter-spacing: 65px;
+}
+
+.splice-text02::before,
+.splice-text02::after {
+    content: attr(data-text); /* Dynamically reflect the main text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.splice-text02::before {
+
+    transform: translate( 75px, 155px); /* Slice upwards */
+    color: #c9c9c9; /* Light color for one "slice" */
+    -webkit-text-stroke: 0;
+    font-size: 11.5;
+   
+}
+
+.splice-text02::after {
+    transform: translate(50px, 135px); /* Slice downwards */
+    /*  color: rgb(255, 255, 255); */ /* Slightly darker slice color */
+     background: transparent;
+    
+   
+}
+
