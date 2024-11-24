@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'CustomFont'; /* Match this name to font-family usage */
+    src: url("/lemon_tuesday/Lemon Tuesday.otf") format('opentype'); /* Correct file path */
+    font-weight: normal; /* Optional: Define weight */
+    font-style: normal; /* Optional: Define style */
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fffcfc;
+    font-family: 'CustomFont', sans-serif/* Match the @font-face name */
+}
+
+.splice-text {
+    font-size: 11rem;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    color: transparent; /* Make the inside transparent */
+    -webkit-text-stroke: 2px rgb(0, 0, 0); /* Creates the black outline */
+    text-align: center;
+    position: relative;
+}
+
+.splice-text::before,
+.splice-text::after {
+    content: attr(data-text); /* Dynamically reflect the main text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.splice-text::before {
+    transform: translate(-11px, -200px); /* Slice upwards */
+    color: #f7f7f7; /* Light color for one "slice" */
+}
+
+.splice-text::after {
+    transform: translate(-20px, -150px); /* Slice downwards */
+    color: rgb(255, 255, 255); /* Slightly darker slice color */
+}
+
+
+/* //////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////// */
+
+.splice-text02 {
+    font-size: 4rem;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    color: transparent; /* Make the inside transparent */
+    -webkit-text-stroke: 2px rgb(0, 0, 0); /* Creates the black outline */
+    text-align: center;
+    position: relative;
+}
+
+.splice-text02::before,
+.splice-text02::after {
+    content: attr(data-text); /* Dynamically reflect the main text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.splice-text02::before {
+    transform: translate(-190px, 10px); /* Slice upwards */
+    color: #f7f7f7; /* Light color for one "slice" */
+}
+
+.splice-text02::after {
+    transform: translate(-200px, -40px); /* Slice downwards */
+    color: rgb(255, 255, 255); /* Slightly darker slice color */
+}
+
