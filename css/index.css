@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Lemon'; /* Match this name to font-family usage */
-    src: url("/lemon_tuesday/Lemon Tuesday.otf") format('opentype'); /* Correct file path */
+    src: url("../lemon_tuesday/Lemon Tuesday.otf") format('opentype'); /* Correct file path */
     font-weight: normal; /* Optional: Define weight */
     font-style: normal; /* Optional: Define style */
 }
