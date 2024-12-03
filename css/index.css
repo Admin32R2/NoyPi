@@ -25,12 +25,74 @@ body {
     font-family: 'Lemon';/* Match the @font-face name */
     background-color: white;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
     
 }
 
+/* Navigation bar styling */
+.Purchase {
+
+    padding: 0px;
+    font-family: 'Poppins';
+    
+    overflow: hidden;
+    
+}
+.Purchase ul {
+  list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+   
+   
+}
+
+.Purchase ul li {
+    margin: 125px;
+    margin-top: 45px;
+    padding: 0px;
+    align-items: center;
+}
+
+/* Base styles */
+.Purchase ul li a {
+    box-sizing: border-box;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-size: 25px;
+   /*  transition: all 0.3s ease;  *//* Smooth transitions */
+
+}
+.Purchase a {
+    border-top: 2px solid rgb(0, 0, 0); /* Top border */
+    border-right: 2px solid rgb(7, 7, 7); /* Right border */
+    border-bottom: 2px solid rgb(0, 0, 0); /* Bottom border */
+    border-left: 2px solid rgb(0, 0, 0); /* Left border */
+}
+
+.Purchase a.hover-active {
+  
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+}
+
+.Purchase a.active {
+   
+    color: rgb(250, 253, 255);
+    background-color: #000000;
+}
+
+
 /* This is the code for the main contents */
 .Main {
-    margin-top: -40px;
+    margin-top: -10px;
 }
 .Welcome h1 {
     font-family: 'Lemon';
@@ -113,7 +175,7 @@ body {
 .splice-text {
     font-size: 12rem;
     font-weight: bold;
-    margin-top: -500px;
+    margin-top: -750px;
     /* text-transform: uppercase; */
     color: transparent; /* Make the inside transparent */
     -webkit-text-stroke: 1px #afafaf; /* Creates the black outline */
