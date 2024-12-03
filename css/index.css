@@ -28,6 +28,23 @@ body {
     
 }
 
+/* This is the code for the main contents */
+.Main {
+    margin-top: -40px;
+}
+.Welcome h1 {
+    font-family: 'Lemon';
+    font-size: 75px;
+    margin-left: 75px;
+}
+
+.Paragraph p {
+    font-family: 'Poppins';
+    font-size: 40px;
+    margin-left: 130px;
+}
+
+
 /* Navigation bar styling */
 .top_nav {
     background-color: gray;
@@ -92,13 +109,11 @@ body {
     background-color: #ffffff;
 }
 
-
-
-
+/* This is the splice font effect in the background */
 .splice-text {
     font-size: 12rem;
     font-weight: bold;
-    margin-top: -185px;
+    margin-top: -500px;
     /* text-transform: uppercase; */
     color: transparent; /* Make the inside transparent */
     -webkit-text-stroke: 1px #afafaf; /* Creates the black outline */
