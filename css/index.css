@@ -29,31 +29,71 @@ body {
 }
 
 /* Navigation bar styling */
-nav {
+.top_nav {
     background-color: gray;
-    padding: 20px 0;
-    font-family: sans-serif;
+    padding: 0px;
+    font-family: 'Poppins';
+    
+
+    background-color: rgb(255, 253, 253);
+    overflow: hidden;
+    border-top: 2px solid rgb(0, 0, 0); /* Top border */
+    border-right: 2px solid rgb(7, 7, 7); /* Right border */
+    border-bottom: 2px solid rgb(0, 0, 0); /* Bottom border */
+    border-left: 2px solid rgb(0, 0, 0); /* Left border */
 }
 
-nav ul {
+.top_nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    background-color: #c9c9c9;
 }
 
-nav ul li {
-    margin: 0 15px;
+.top_nav ul li {
+    margin: 0;
 }
 
-nav ul li a {
+.top_nav ul li a.spaced {
+    margin-left: 700px; /* Adds space before "About" */
+    /* Optional: Adjust margin-right if needed */
+    margin-right: 50px;
+}
+
+/* Base styles */
+.top_nav ul li a {
+    box-sizing: border-box;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 50px;
     text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 25px;
-    
+    font-size: 20px;
+   /*  transition: all 0.3s ease;  *//* Smooth transitions */
 }
+
+.top_nav a.hover-active {
+    border-top: 2px solid rgb(0, 0, 0); /* Top border */
+    border-right: 2px solid rgb(7, 7, 7); /* Right border */
+    border-bottom: 2px solid rgb(0, 0, 0); /* Bottom border */
+    border-left: 2px solid rgb(0, 0, 0); /* Left border */
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.top_nav a.active {
+    border-top: 2px solid rgb(0, 0, 0); /* Top border */
+    border-right: 2px solid rgb(7, 7, 7); /* Right border */
+    border-bottom: 2px solid rgb(0, 0, 0); /* Bottom border */
+    border-left: 2px solid rgb(0, 0, 0); /* Left border */
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+
+
+
 
 .splice-text {
     font-size: 12rem;
@@ -147,3 +187,53 @@ nav ul li a {
    
 }
 
+@media (max-width: 768px) {
+    /* Body Styling */
+    body {
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+        text-align: center; /* Center align for better readability */
+    }
+
+    /* Navigation Bar */
+    .top_nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        justify-content: flex-start; /* Adjust alignment for stacked menu */
+        background-color: #f4f4f4; /* Change background for better visibility */
+    }
+
+    .top_nav ul li a {
+        padding: 10px 20px; /* Adjust padding for smaller touch targets */
+        font-size: 18px; /* Smaller font size */
+    }
+
+    /* Splice Text */
+    .splice-text, .splice-text02 {
+        font-size: 6rem; /* Reduce font size for smaller screens */
+        letter-spacing: 10px; /* Adjust spacing */
+        word-spacing: 10px;
+        margin-top: 20px; /* Adjust margin */
+    }
+
+    .splice-text::before,
+    .splice-text::after,
+    .splice-text02::before,
+    .splice-text02::after {
+        transform: translate(30px, 80px); /* Adjust transformation for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce font sizes and spacing for very small devices */
+    .splice-text, .splice-text02 {
+        font-size: 4rem;
+        letter-spacing: 5px;
+        word-spacing: 5px;
+    }
+
+    .splice-text::before,
+    .splice-text::after,
+    .splice-text02::before,
+    .splice-text02::after {
+        transform: translate(15px, 40px);
+    }
+}
