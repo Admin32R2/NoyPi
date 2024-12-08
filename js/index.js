@@ -3,6 +3,9 @@
 const navLinks = document.querySelectorAll('.top_nav a');
 // Add click event listener to each link
 navLinks.forEach(link => link.addEventListener('click', toggleActiveLink01));
+
+// Add click event listener to each link
+navLinks.forEach(link => link.addEventListener('click', handleNavigation));
 // Function to toggle the 'active' class and corresponding div visibility
 function toggleActiveLink01(event) {
   event.preventDefault(); // Prevent default anchor behavior
@@ -17,7 +20,33 @@ function toggleActiveLink01(event) {
     clickedLink01.classList.add('active'); 
   }
 } 
+/////////////////////////////////
 
+// Function to scroll to the corresponding section
+function handleNavigation(event) {
+  event.preventDefault(); // Prevent default anchor behavior
+  
+  // Get the target section id from the data-target attribute
+  const targetId = event.target.getAttribute('data-target');
+  const targetElement = document.getElementById(targetId);
+  
+  if (targetElement) {
+    const navbarHeight = document.querySelector('.top_nav').offsetHeight;
+
+    // Scroll to the target section smoothly, adjusting for the navbar height
+    window.scrollTo({
+      top: 0,
+      top: targetElement.offsetTop - navbarHeight, // Offset by navbar height
+      behavior: 'smooth' // Smooth scrolling
+    });
+
+    // Optional: Highlight the clicked link
+    navLinks.forEach(link => link.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+}
+
+/////////////////////////////////
 document.querySelectorAll('.top_nav ul li a').forEach((link) => {
     let hoverTimeout;
 
@@ -51,5 +80,10 @@ function toggleActiveLink021(event) {
     clickedLink021.classList.add('active'); 
   }
 } 
+
+/* this code make the home page as default during startup */
+const navButtons = document.querySelectorAll('.default');
+
+
 
 

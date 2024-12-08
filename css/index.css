@@ -26,12 +26,36 @@ body {
     background-color: white;
     align-items: center;
     overflow-x: hidden;
-    overflow-y: hidden;
+    scroll-behavior: smooth;
+    /* overflow-y: hidden; */
 
 
     
 }
+#home {
+    margin-top: 0;
+    padding-top: 0;
+  }
+.section {
+   
+    margin: 0;
+    scroll-margin-top: 0; /* Ensure no offset from scrolling */
+    scroll-margin-bottom: 0;
+    box-sizing: border-box; /* Prevent padding from affecting height */
+    margin: 0; /* No margins to prevent misalignment */
+    padding: 0; /* No padding to keep sections aligned */
+  }
+.Contacts {
+    
+    margin-top: 750px;
+    height: 300px;
+  }
 
+.About {
+    
+    margin-top: 300px;
+    height: 300px;
+  }
 /* Navigation bar styling */
 .Purchase {
 
@@ -91,11 +115,15 @@ body {
 
 
 /* This is the code for the main contents */
+.Parent {
+    margin-top: 200px;
+}
 .Main {
-    margin-top: -10px;
+    margin-top: 30px;
 }
 .Welcome h1 {
     font-family: 'Lemon';
+    margin-top: 100px;
     font-size: 75px;
     margin-left: 75px;
 }
@@ -109,9 +137,13 @@ body {
 
 /* Navigation bar styling */
 .top_nav {
+    position: fixed; /* Makes it stay in place */
+    top: 0; /* Sticks to the top of the viewport */
+    left: 0;
     background-color: gray;
     padding: 0px;
     font-family: 'Poppins';
+
     
 
     background-color: rgb(255, 253, 253);
@@ -175,7 +207,7 @@ body {
 .splice-text {
     font-size: 12rem;
     font-weight: bold;
-    margin-top: -750px;
+    margin-top: -700px;
     /* text-transform: uppercase; */
     color: transparent; /* Make the inside transparent */
     -webkit-text-stroke: 1px #afafaf; /* Creates the black outline */

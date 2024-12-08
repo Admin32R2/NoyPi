@@ -1,19 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splice Effect</title>
-    <link rel="stylesheet" href="test.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfect Section Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth; /* Enable smooth scrolling */
+    }
+
+    .top_nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      padding: 0px;
+ 
+    }
+
+    .top_nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    .section {
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0; /* No margins to prevent misalignment */
+      padding: 0; /* No padding to keep sections aligned */
+      box-sizing: border-box; /* Include padding/border in height */
+    }
+
+    #home {
+      background: lightblue;
+    }
+
+    #about {
+      background: lightgreen;
+    }
+
+    #services {
+      background: lightcoral;
+    }
+
+    #contacts {
+      background: lightgoldenrodyellow;
+    }
+  </style>
 </head>
 <body>
-    <div class="splice-text" data-text="Lasang">
-       
-    </div>
+  <div class="top_nav">
+    <a href="#" data-target="home">Home</a>
+    <a href="#" data-target="about">About</a>
+    <a href="#" data-target="services">Services</a>
+    <a href="#" data-target="contacts">Contacts</a>
+  </div>
 
-    <div class="splice-text02" data-text="NoyPi">
-       
-    </div>
-    
+  <div id="home" class="section">Home Section</div>
+  <div id="about" class="section">About Section</div>
+  <div id="services" class="section">Services Section</div>
+  <div id="contacts" class="section">Contacts Section</div>
+
+  <script>
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.top_nav a');
+
+    // Add click event listener to each link
+    navLinks.forEach(link => link.addEventListener('click', handleNavigation));
+
+    function handleNavigation(event) {
+      event.preventDefault(); // Prevent default anchor behavior
+      
+      // Get the target section id from the data-target attribute
+      const targetId = event.target.getAttribute('data-target');
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        // Scroll to the top of the target section precisely
+        window.scrollTo({
+          top: targetElement.offsetTop, // Position the top of the section at the top of the viewport
+          behavior: 'smooth' // Smooth scrolling
+        });
+      }
+    }
+  </script>
 </body>
 </html>

@@ -7,48 +7,82 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div class="Parent">
+            <div class="top_nav">
+                <ul>
+                    <li><a class="active default" href="#" data-target="home">Home</a></li>
+                    <li><a href="#" data-target="contacts">Contacts</a></li>
+                    <li><a href="#" data-target="about">About</a></li>
+                    <li><a class="spaced" href="#login" class="login">Login</a></li>
+                </ul>
+            </div>
+
+    <div class="Parent" id="home">
        
-        <div class="top_nav">
-            <ul>
-                <li><a class="active default" href="#" data-target="Home">Home</a></li>
-                <li><a href="#" data-target="Contacts">Contacts</a></li>
-                <li><a href="#" data-target="About">About</a></li>
-                <li><a class="spaced" href="#login" class="login">Login</a></li>
-            </ul>
-        </div>
+        
         <!-- main contents -->
-        <div class="Main">
-            <div class="Welcome">
-                <h1>Welcome to LNP!</h1>
+       
+            <div class="Main">
+                <div class="Welcome">
+                    <h1>Welcome to LNP!</h1>
+                </div>
+                
+                <div class="Paragraph">
+                    <p>Taste the Philippines!!!<br>
+                        like never before to where<br>
+                        options are boundless...</p>
+                </div>
             </div>
+            <!-- Background -->
+
+            <div class="Purchase">
+                <ul>
+                    <li><a href="#">Dine in</a></li>
+                    <li><a href="#">Take out</a></li>
+                    <li><a href="#">Reserve</a></li>
+                </ul>
+            </div>
+
             
-            <div class="Paragraph">
-                <p>Taste the Philippines!!!<br>
-                    like never before to where<br>
-                    options are boundless...</p>
+            
+
+            <div class="splice-text" data-text="Lasang">
+            
             </div>
-        </div>
-        <!-- Background -->
 
-        <div class="Purchase">
-            <ul>
-                <li><a href="#">Dine in</a></li>
-                <li><a href="#">Take out</a></li>
-                <li><a href="#">Reserve</a></li>
-            </ul>
+            <div class="splice-text02" data-text="NoyPi">
+            
+            </div>
+
+           
+            
+
+            <script src="js/index.js"></script>
+
+    </div>
+
+    <div id="contacts" class="section Contacts" 
+        <h1> Contacts</h1>
+
+        <div 
+            class="splice-text" data-text="Lasang" style="margin-top: -175px;">
         </div>
+
+        <div 
+           class="splice-text02" data-text="NoyPi" style="margin-top: 275px;">
+        </div>
+
+    </div>
+
+    <div id="about" class="section About" 
+        <h1> about</h1>
+
+        <div class="splice-text" data-text="Lasang" style="margin-top: -175px;">
+            
+        </div>
+
+        <div class="splice-text02" data-text="NoyPi" style="margin-top: 275px;">
         
-
-        <div class="splice-text" data-text="Lasang">
-        
         </div>
-
-        <div class="splice-text02" data-text="NoyPi">
-        
-        </div>
-
-        <script src="js/index.js"></script>
 
     </div>
     
