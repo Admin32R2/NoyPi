@@ -19,7 +19,6 @@
     font-weight: normal; /* Optional: Define weight */
     font-style: normal; /* Optional: Define style */
 }
-
 body {
     margin: 0;
     font-family: 'Lemon';/* Match the @font-face name */
@@ -28,14 +27,46 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     /* overflow-y: hidden; */
-
-
-    
 }
-#home {
-    margin-top: 0;
-    padding-top: 0;
-  }
+.popup-dinein h1{
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 50px;
+}
+
+.popup-content {
+    width: 950px;
+    height: 400px;
+    background-color: #ccc;
+}
+
+.disabled {
+    opacity: 0.5; /* Optional: Make disabled links appear faded */
+    cursor: not-allowed; /* Change cursor to indicate the link is disabled */
+}
+
+.top_nav.disabled {
+    opacity: 0.5; /* Optional: Make disabled links appear faded */
+    cursor: not-allowed; /* Change cursor to indicate the link is disabled */
+}
+
+.hidden {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 5px;
+    align-content: center;
+}
+
 .section {
    
     margin: 0;
@@ -99,12 +130,6 @@ body {
     border-right: 2px solid rgb(7, 7, 7); /* Right border */
     border-bottom: 2px solid rgb(0, 0, 0); /* Bottom border */
     border-left: 2px solid rgb(0, 0, 0); /* Left border */
-}
-
-.Purchase a.hover-active {
-  
-    background-color: #000000;
-    color: rgb(0, 0, 0);
 }
 
 .Purchase a.active {

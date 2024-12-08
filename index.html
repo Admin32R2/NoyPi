@@ -7,84 +7,83 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-            <div class="top_nav">
-                <ul>
-                    <li><a class="active default" href="#" data-target="home">Home</a></li>
-                    <li><a href="#" data-target="contacts">Contacts</a></li>
-                    <li><a href="#" data-target="about">About</a></li>
-                    <li><a class="spaced" href="#login" class="login">Login</a></li>
-                </ul>
-            </div>
+    <div class="top_nav">
+        <ul>
+            <li><a class="active default" href="#" data-target="home">Home</a></li>
+            <li><a href="#" data-target="contacts">Contacts</a></li>
+            <li><a href="#" data-target="about">About</a></li>
+            <li><a class="spaced" href="#login" class="login">Login</a></li>
+        </ul>
+    </div>
 
     <div class="Parent" id="home">
-       
-        
         <!-- main contents -->
-       
-            <div class="Main">
-                <div class="Welcome">
-                    <h1>Welcome to LNP!</h1>
+        <div class="Main">
+            <div class="Welcome">
+                <h1>Welcome to LNP!</h1>
+            </div>
+            
+            <div class="Paragraph">
+                <p>Taste the Philippines!!!<br>
+                    like never before to where<br>
+                    options are boundless...</p>
+            </div>
+        </div>
+
+        <!-- Background -->
+        <div class="Purchase">
+            <ul>
+                <li><a href="#" class="popup-trigger" data-popup="dinein-popup">Dine in</a></li>
+                <li><a href="#" class="popup-trigger" data-popup="takeout-popup">Take out</a></li>
+                <li><a href="#" class="popup-trigger" data-popup="reserve-popup">Reserve</a></li>
+            </ul>
+        </div>
+
+        <!-- Pop-ups -->
+        <div id="dinein-popup" class="popup hidden" >
+            <div class="popup-content">
+                <button class="close-btn">X</button>
+                <p>You selected Dine In.</p>
+                <div class="popup-dinein">
+                <h1>Adobo</h1>
                 </div>
-                
-                <div class="Paragraph">
-                    <p>Taste the Philippines!!!<br>
-                        like never before to where<br>
-                        options are boundless...</p>
-                </div>
             </div>
-            <!-- Background -->
+        </div>
 
-            <div class="Purchase">
-                <ul>
-                    <li><a href="#">Dine in</a></li>
-                    <li><a href="#">Take out</a></li>
-                    <li><a href="#">Reserve</a></li>
-                </ul>
+        <div id="takeout-popup" class="takeout popup hidden">
+            <div class="popup-content">
+                <button class="close-btn">X</button>
+                <p>You selected Take Out.</p>
             </div>
+        </div>
 
-            
-            
-
-            <div class="splice-text" data-text="Lasang">
-            
+        <div id="reserve-popup" class="reserve popup hidden">
+            <div class="popup-content">
+                <button class="close-btn">X</button>
+                <p>You selected Reserve.</p>
             </div>
+        </div>
 
-            <div class="splice-text02" data-text="NoyPi">
-            
-            </div>
-
-           
-            
-
-            <script src="js/index.js"></script>
+        <div class="splice-text" data-text="Lasang"></div>
+        <div class="splice-text02" data-text="NoyPi"></div>
 
     </div>
 
-    <div id="contacts" class="section Contacts" 
+    <div id="contacts" class="section Contacts">
         <h1> Contacts</h1>
-
-        <div 
-            class="splice-text" data-text="Lasang" style="margin-top: -175px;">
-        </div>
-
-        <div 
-           class="splice-text02" data-text="NoyPi" style="margin-top: 275px;">
-        </div>
-
+        <div class="splice-text" data-text="Lasang" style="margin-top: -175px;"></div>
+        <div class="splice-text02" data-text="NoyPi" style="margin-top: 275px;"></div>
     </div>
 
-    <div id="about" class="section About" 
+    <div id="about" class="section About">
         <h1> about</h1>
-
-        <div class="splice-text" data-text="Lasang" style="margin-top: -175px;">
-            
-        </div>
-
-        <div class="splice-text02" data-text="NoyPi" style="margin-top: 275px;">
-        
-        </div>
-
+        <div class="splice-text" data-text="Lasang" style="margin-top: -175px;"></div>
+        <div class="splice-text02" data-text="NoyPi" style="margin-top: 275px;"></div>
     </div>
-    
+
+    <!-- Place JS file reference at the end -->
+    <script src="js/index.js"></script>
+    <script src="js/purchase.js"></script>
+
 </body>
 </html>

@@ -87,3 +87,30 @@ const navButtons = document.querySelectorAll('.default');
 
 
 
+// Disable navigation links
+function disableNavLinks() {
+  navLinks.forEach(link => {
+      link.classList.add('disabled');
+      link.style.pointerEvents = 'none'; // Disable clicks
+  });
+}
+
+// Re-enable navigation links
+function enableNavLinks() {
+  navLinks.forEach(link => {
+      link.classList.remove('disabled');
+      link.style.pointerEvents = 'auto'; // Enable clicks
+  });
+}
+
+// Listen for custom event or class change to disable/enable nav links
+document.body.addEventListener('classChange', () => {
+  if (document.body.classList.contains('disabled')) {
+      disableNavLinks();
+  } else {
+      enableNavLinks();
+  }
+});
+
+
+
