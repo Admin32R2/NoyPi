@@ -1,0 +1,65 @@
+/* General Reset */
+@font-face {
+    font-family: 'CustomFont'; /* Match this name to font-family usage */
+    src: url("/maragsa-font_john-david-maza_150620/Maragsâ.otf") format('opentype'); /* Correct file path */
+    font-weight: normal; /* Optional: Define weight */
+    font-style: normal; /* Optional: Define style */
+}
+
+@font-face {
+    font-family: 'Lemon'; /* Match this name to font-family usage */
+    src: url("../lemon_tuesday/Lemon Tuesday.otf") format('opentype'); /* Correct file path */
+    font-weight: normal; /* Optional: Define weight */
+    font-style: normal; /* Optional: Define style */
+}
+
+@font-face {
+    font-family: 'Poppins'; /* Match this name to font-family usage */
+    src: url("/poppins/Poppins-Black.ttf") format('ttf'); /* Correct file path */
+    font-weight: normal; /* Optional: Define weight */
+    font-style: normal; /* Optional: Define style */
+}
+
+/* This is the splice font effect in the background */
+.splice-text {
+    font-size: 12rem;
+    font-weight: bold;
+    
+    /* text-transform: uppercase; */
+    color: transparent; /* Make the inside transparent */
+    -webkit-text-stroke: 1px #afafaf; /* Creates the black outline */
+    line-height: 1.5;
+    word-spacing: 15px;
+    letter-spacing: 65px;
+    font-style: 'Lemon';
+}
+
+.splice-text::before,
+.splice-text::after {
+  
+    content: attr(data-text); /* Dynamically reflect the main text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.splice-text::before {
+
+    transform: translate( 75px, 155px); /* Slice upwards */
+    color: #c9c9c9; /* Light color for one "slice" */
+    -webkit-text-stroke: 0;
+    font-size: 11.5;
+   
+}
+
+.splice-text::after {
+    transform: translate(50px, 135px); /* Slice downwards */
+    /*  color: rgb(255, 255, 255); */ /* Slightly darker slice color */
+     background: transparent;
+    
+   
+}
