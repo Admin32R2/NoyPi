@@ -74,3 +74,36 @@ closeButtons.forEach(button => {
         resetActiveLinks(); // Remove active state from the links
     });
 });
+
+
+
+
+/// Selectors
+const menuItems = document.querySelectorAll('.menu-item'); // Select menu divs
+const displayDiv = document.getElementById('menu-display');
+const btnPrev = document.getElementById('btn-prev');
+const btnNext = document.getElementById('btn-next');
+
+let currentIndex = 0; // Track current item index
+
+// Function to update the display with the current menu item
+function updateDisplay() {
+    const currentItem = menuItems[currentIndex];
+    displayDiv.textContent = currentItem.textContent;
+}
+
+// Event listeners for buttons
+btnNext.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % menuItems.length; // Cycle forward
+    updateDisplay();
+});
+
+btnPrev.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + menuItems.length) % menuItems.length; // Cycle backward
+    updateDisplay();
+});
+
+// Initial display update
+updateDisplay();
+
+

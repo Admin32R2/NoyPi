@@ -87,6 +87,10 @@ section {
    background-color: #000000;
 }
 
+.Contacts .splice-text {
+    align-items: center;
+}
+
 .About {
   background-color: #b11414;
 }
@@ -161,6 +165,50 @@ section {
     color: rgb(250, 253, 255);
     background-color: #000000;
 }
+
+.menu-item {
+    display: none; /* Keep them hidden visually */
+}
+
+.menu-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Align buttons to opposite ends */
+    align-items: center; /* Vertically center buttons */
+    width: 100%; /* Ensure it stretches across the container */
+    margin: 10px 0; /* Add some spacing above and below */
+   
+    
+}
+.move-food-L-R,
+.move-food-R-L {
+    position: fixed; /* Sticks the buttons to the viewport */
+    top: 50%; /* Align vertically centered */
+    transform: translateY(-50%); /* Adjust for exact center */
+    background-color: #ddd;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1000; /* Ensures it stays on top of everything */
+    border: none;
+    border-radius: 5px;
+}
+
+.move-food-L-R {
+    left: 20px; /* Stick to the far left of the screen */
+}
+
+.move-food-R-L {
+    right: 20px; /* Stick to the far right of the screen */
+}
+
 
 
 /* This is the code for the main contents */
