@@ -25,26 +25,30 @@ function toggleActiveLink01(event) {
 // Function to scroll to the corresponding section
 function handleNavigation(event) {
   event.preventDefault(); // Prevent default anchor behavior
-  
+
   // Get the target section id from the data-target attribute
   const targetId = event.target.getAttribute('data-target');
   const targetElement = document.getElementById(targetId);
-  
+
   if (targetElement) {
     const navbarHeight = document.querySelector('.top_nav').offsetHeight;
 
-    // Scroll to the target section smoothly, adjusting for the navbar height
+    // Use `getBoundingClientRect` for better precision with responsive units
+    const sectionPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+
+    // Scroll to the target section smoothly, adjusting for navbar height
     window.scrollTo({
-      top: 0,
-      top: targetElement.offsetTop - navbarHeight, // Offset by navbar height
-      behavior: 'smooth' // Smooth scrolling
+      top: sectionPosition - navbarHeight, // Account for navbar
+      behavior: 'smooth',
     });
 
     // Optional: Highlight the clicked link
+    const navLinks = document.querySelectorAll('.top_nav a');
     navLinks.forEach(link => link.classList.remove('active'));
     event.target.classList.add('active');
   }
 }
+
 
 /////////////////////////////////
 document.querySelectorAll('.top_nav ul li a').forEach((link) => {

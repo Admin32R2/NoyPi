@@ -16,6 +16,40 @@ body {
     font-family: 'CustomFont', sans-serif/* Match the @font-face name */
 }
 
+/* Base styles for all sections */
+section {
+    width: 100vw;        /* Full width of the viewport */
+    height: 100vh;       /* Full height of the viewport */
+    box-sizing: border-box;
+    display: flex;       /* Flexbox for centering content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    scroll-snap-align: start; /* For precise snapping */
+}
+
+/* Add smooth scrolling to the entire page */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-snap-type: y mandatory; /* Snap scroll vertically */
+    overflow-y: scroll; /* Allow vertical scrolling */
+}
+
+/* Optional: Different background colors for visibility */
+.Main {
+    background-color: lightblue;
+}
+
+.Contacts {
+    background-color: lightgreen;
+}
+
+.About {
+    background-color: lightcoral;
+}
+
+
 .splice-text {
     font-size: 11rem;
     font-weight: bold;
