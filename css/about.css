@@ -1,0 +1,61 @@
+
+
+.first_statement_About h1{
+    font-family: Lemon;
+   margin-top: -5%;
+   font-size: 40px;
+   color: rgb(0, 0, 0);              /* Text color */
+    text-align: center;        /* Center-align the text */
+    text-shadow: 
+        -2px -2px 0 rgb(255, 255, 255),     /* Top-left shadow */
+         2px -2px 0 rgb(255, 252, 252),     /* Top-right shadow */
+        -2px  2px 0 rgb(255, 255, 255),     /* Bottom-left shadow */
+         2px  2px 0 rgb(252, 252, 252);     /* Bottom-right shadow */
+    
+}
+
+.first_statement_About h2{
+    font-family: Poppins;
+   margin-top: -1%;
+   margin-bottom: 1%;
+   font-size: 30px;
+   color: rgb(0, 0, 0);              /* Text color */
+    text-align: center;        /* Center-align the text */
+    text-shadow: 
+        -2px -2px 0 rgb(255, 255, 255),     /* Top-left shadow */
+         2px -2px 0 rgb(255, 252, 252),     /* Top-right shadow */
+        -2px  2px 0 rgb(255, 255, 255),     /* Bottom-left shadow */
+         2px  2px 0 rgb(252, 252, 252);     /* Bottom-right shadow */
+    
+}
+
+/* Section Styling */
+.about-info {
+    
+    height: 65%;
+    width: 60%;
+    background-color: #fff; /* White background */
+    border-radius: 12px;    /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px 30px;     /* Padding inside the box */
+    font-family: Arial, sans-serif;
+    color: #333;            /* Dark text color */
+    margin: 20px auto;      /* Center horizontally */
+   /*  max-width: 800px;   */     /* Optional max width */
+  }
+  
+  /* Container for two sections */
+  .about_info-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+.statement_about-info p{
+    font-family: Poppins;
+    color: black;
+    font-size: 25px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+  
