@@ -47,19 +47,7 @@ section {
             opacity: 0.3;
 }
 
-.Contacts .background {
-    position: absolute; /* Removes it from the normal flow */
-            top: 100;
-            left: 0;
-            width: 100%; /* Full width of the parent */
-            height: 100%; /* Full height of the parent */
-            background-image: url('../images/Food-Culture-In-The-Philippines.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: -1; /* Push it behind the content */
-            opacity: 0.3;
-}
+
 
 .About .background {
     position: absolute; /* Removes it from the normal flow */
@@ -133,12 +121,11 @@ section {
 }
 
 .Contacts {
-   text-align: center;
+   background: transparent;
+   
 }
 
-.Contacts .splice-text {
-    align-items: center;
-}
+
 
 .About {
   align-items: center;
