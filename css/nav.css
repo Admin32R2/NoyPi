@@ -1,0 +1,93 @@
+/* Navigation bar styling */
+.top_nav {
+  position: fixed; /* Makes it stay in place */
+  top: 0; /* Sticks to the top of the viewport */
+  left: 0;
+  width: 100vw; /* Full screen width */
+  background-color: #9fc640;
+  padding: 0;
+  font-family: 'Poppins';
+  overflow: hidden;
+  border: 2px solid rgb(0, 0, 0); /* Single shorthand for all sides */
+  box-sizing: border-box; /* Include borders in width calculations */
+  z-index: 1000;
+}
+
+/* Center the navigation items */
+.top_nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #9fc640;
+}
+
+/* List item styling */
+.top_nav ul li {
+  margin: 0;
+}
+
+/* Adjust spacing for specific links */
+.top_nav ul li a.spaced {
+  margin-left: 700px; /* Adds space before "About" */
+  margin-right: 50px; /* Optional */
+}
+
+/* Base styles for links */
+.top_nav ul li a {
+  box-sizing: border-box;
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+  font-size: 20px;
+  /* Smooth hover transitions */
+  transition: all 0.3s ease;
+}
+
+/* Hover and active link styles */
+.top_nav a.hover-active,
+.top_nav a.active {
+  border: 2px solid rgb(0, 0, 0); /* Simplified shorthand */
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .top_nav ul {
+      flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  }
+  
+  .top_nav ul li a {
+      padding: 10px 30px; /* Reduce padding for smaller screens */
+      font-size: 18px; /* Slightly smaller font */
+  }
+
+  .top_nav ul li a.spaced {
+      margin-left: 0; /* Remove large margin on smaller screens */
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .top_nav {
+      height: 50px; /* Reduce overall height */
+  }
+
+  .top_nav ul {
+      justify-content: space-around; /* Space out items evenly */
+  }
+
+  .top_nav ul li a {
+      padding: 10px 15px; /* Smaller padding for links */
+      font-size: 14px; /* Smaller font size */
+  }
+
+  .top_nav ul li a.spaced {
+      margin-left: 0; /* Remove any extra margins */
+      margin-right: 0;
+  }
+}

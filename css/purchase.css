@@ -1,0 +1,144 @@
+
+/* Navigation bar styling */
+.Purchase {
+
+    padding: 0px;
+    font-family: 'Poppins';
+    
+   
+    
+}
+.Purchase ul {
+  list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+   
+   
+}
+
+.Purchase ul li {
+    margin: 125px;
+    margin-top: 45px;
+    padding: 0px;
+    align-items: center;
+}
+
+/* Base styles */
+.Purchase ul li a {
+    box-sizing: border-box;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-size: 25px;
+   /*  transition: all 0.3s ease;  *//* Smooth transitions */
+
+}
+.Purchase a {
+    border-top: 2px solid rgb(0, 0, 0); /* Top border */
+    border-right: 2px solid rgb(7, 7, 7); /* Right border */
+    border-bottom: 2px solid rgb(0, 0, 0); /* Bottom border */
+    border-left: 2px solid rgb(0, 0, 0); /* Left border */
+}
+
+.Purchase a.active {
+   
+    color: rgb(250, 253, 255);
+    background-color: #000000;
+}
+
+.menu-item {
+    display: none; /* Keep them hidden visually */
+}
+
+.menu-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Align buttons to opposite ends */
+    align-items: center; /* Vertically center buttons */
+    width: 100%; /* Ensure it stretches across the container */
+    margin: 10px 0; /* Add some spacing above and below */
+   
+    
+}
+.move-food-L-R,
+.move-food-R-L {
+    position: fixed; /* Sticks the buttons to the viewport */
+    top: 50%; /* Align vertically centered */
+    transform: translateY(-50%); /* Adjust for exact center */
+    background-color: #ddd;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1000; /* Ensures it stays on top of everything */
+    border: none;
+    border-radius: 5px;
+}
+
+.move-food-L-R {
+    left: 20px; /* Stick to the far left of the screen */
+}
+
+.move-food-R-L {
+    right: 20px; /* Stick to the far right of the screen */
+}
+
+.popup-content {
+    width: 950px;
+    height: 400px;
+    background-color: #c4bfbf;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+   
+     /* Prevent content clipping */
+}
+
+.close-btn {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 50%; /* Optional: vertical alignment */
+    transform: translateY(-700%); /* Optional: centers vertically */
+    margin-right: 5px;
+}
+
+.disabled {
+    opacity: 0.5; /* Optional: Make disabled links appear faded */
+    cursor: not-allowed; /* Change cursor to indicate the link is disabled */
+}
+
+.hidden {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 5px;
+    align-content: center;
+}
+
+.popup .popup-content .dineIn h1{
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Poppins';
+    color: aqua;
+}
+
