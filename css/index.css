@@ -1,76 +1,4 @@
 
-body {
-    margin: 0;
-    font-family: 'Lemon';/* Match the @font-face name */
-   
-    align-items: center;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    /* overflow-y: hidden; */
-}
-html {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    scroll-behavior: smooth; /* Smooth scrolling */
-    scroll-snap-type: y mandatory; /* Snap scroll vertically */
-    overflow-y: scroll; /* Allow vertical scrolling */
-    overflow-x: hidden;
-}
-
-/* Base styles for all sections */
-section {
-    width: 100vw;        /* Full width of the viewport */
-    height: 100vh;       /* Full height of the viewport */
-    box-sizing: border-box;
-    display: flex;       /* Flexbox for centering content */
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    border: none;        /* Removes border */
-    outline: none;       /* Removes focus outline */
-    scroll-snap-align: start; /* For precise snapping */
-}
-
-/* Specific adjustments for smaller screens */
-@media (max-width: 768px) {
-    .Main, .About, .Contacts {
-        height: 100vh; /* Ensure full screen height */
-    }
-
-    /* Ensure the content within sections is centered and fully occupies the screen */
-    .Main h1, .Main p, 
-    .About .first_statement_About h1, .About .first_statement_About h2, 
-    .Contacts .first_statement_Contacts h1 {
-        margin: 0;  /* Remove any margins that may push content out of view */
-        text-align: center; /* Center text for smaller screens */
-        font-size: 20px;  /* Adjust font size as needed */
-    }
-
-    /* Adjust canvas or content containers to fit smaller screens */
-    .canvas, .contact-info, .about-info {
-        height: 100%;  /* Take up the full screen height */
-        width: 100%;  /* Full width of the screen */
-        margin: 0;  /* Remove margins to ensure no gaps */
-        padding: 10px;  /* Optional: Add some padding for aesthetics */
-    }
-
-    /* Adjust other elements for mobile */
-    .info-container, .about_info-container {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-        justify-content: center; /* Center content vertically */
-        width: 100%;
-    }
-
-    .business-info, .social-media {
-        min-width: 100%; /* Ensure content does not overflow */
-        margin: 10px 0; /* Adjust spacing between items */
-    }
-}
-
-
 .Main .background {
     position: absolute; /* Removes it from the normal flow */
             top: 0;
@@ -83,6 +11,51 @@ section {
             background-position: center;
             z-index: -1; /* Push it behind the content */
             opacity: 0.3;
+}
+
+.Main {
+    position: relative;  /* Set parent to relative so child is positioned relative to it */
+    width: 100%;         /* Example width */
+    height: 100vh;       /* Full viewport height */
+
+}
+.splice-text {
+    position: absolute;  /* Make the child absolutely positioned */
+    top: -500px;           /* Position it from the top */
+    left: -450px;          /* Position it from the left */
+    width: 100px;        /* Set a width for the child */
+    height: 100px;       /* Set a height for the child */
+}
+
+/* Media Query for Tablet Screens */
+@media (max-width: 1024px) {
+    .splice-text {
+        position: absolute;
+        top: -300px;          /* Adjust position for tablet screens */
+        left: -300px;         /* Adjust position for tablet screens */
+        width: 80px;          /* Adjust width for tablet screens */
+        height: 80px;         /* Adjust height for tablet screens */
+    }
+}
+
+/* Media Query for Phone Screens */
+@media (max-width: 768px) {
+    .splice-text {
+        top: -100px;          /* Adjust position for phone screens */
+        left: -150px;         /* Adjust position for phone screens */
+        width: 60px;          /* Adjust width for phone screens */
+        height: 60px;         /* Adjust height for phone screens */
+    }
+}
+
+/* Media Query for Smaller Phone Screens */
+@media (max-width: 480px) {
+    .splice-text {
+        top: -50px;           /* Adjust position for smaller phones */
+        left: -50px;          /* Adjust position for smaller phones */
+        width: 50px;          /* Adjust width for smaller phones */
+        height: 50px;         /* Adjust height for smaller phones */
+    }
 }
 
 .Main h1 {
@@ -132,57 +105,84 @@ section {
     }
 }
 
-/* This is the code for the main contents */
-.Parent {
-    margin-top: 0px;
-}
-
 body {
     margin: 0;
+    font-family: 'Lemon';/* Match the @font-face name */
+   
+    align-items: center;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* overflow-y: hidden; */
+}
+html {
+    margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-snap-type: y mandatory; /* Snap scroll vertically */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    overflow-x: hidden;
 }
 
-.Contacts {
-    position: relative; /* Maintain normal stacking context */
-    min-height: 100vh; /* Occupy full viewport height */
-    display: flex;
-    flex-direction: column; /* Stack sections vertically */
+/* Base styles for all sections */
+section {
+    width: 100vw;        /* Full width of the viewport */
+    height: 100vh;       /* Full height of the viewport */
+    box-sizing: border-box;
+    display: flex;       /* Flexbox for centering content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    border: none;        /* Removes border */
+    outline: none;       /* Removes focus outline */
+    scroll-snap-align: start; /* For precise snapping */
 }
 
-.Contacts .canvas,
-.contact-info {
-    margin-bottom: 20px; /* Space between sections */
-}
-
-/* Background Fix */
-.Contacts .background {
-    position: fixed; /* Keeps it in place while scrolling */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Push behind the content */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.3;
-}
-
-/* Responsive Adjustments */
+/* Specific adjustments for smaller screens */
 @media (max-width: 768px) {
-    .info-container {
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center content */
+    .Main, .About, .Contacts {
+        height: 100vh; /* Ensure full screen height */
     }
 
-    .Contacts .canvas {
-        width: 95%; /* Make sections narrower on small screens */
-        margin-bottom: 20px;
+    .Contacts {
+        height: 100vh; /* Ensure full screen height */
     }
 
-    .contact-info {
-        width: 90%;
-        padding: 15px 20px; /* Adjust padding */
+    .About {
+        height: 100vh; /* Ensure full screen height */
+    }
+
+    /* Ensure the content within sections is centered and fully occupies the screen */
+    .Main h1, .Main p, 
+    .About .first_statement_About h1, .About .first_statement_About h2, 
+    .Contacts .first_statement_Contacts h1 {
+        margin: 0;  /* Remove any margins that may push content out of view */
+        text-align: center; /* Center text for smaller screens */
+        font-size: 20px;  /* Adjust font size as needed */
+    }
+
+    /* Adjust canvas or content containers to fit smaller screens */
+    .canvas, .contact-info, .about-info {
+        height: 100%;  /* Take up the full screen height */
+        width: 100%;  /* Full width of the screen */
+        margin: 0;  /* Remove margins to ensure no gaps */
+        padding: 10px;  /* Optional: Add some padding for aesthetics */
+    }
+
+    /* Adjust other elements for mobile */
+    .info-container, .about_info-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        justify-content: center; /* Center content vertically */
+        width: 100%;
+    }
+
+    .business-info, .social-media {
+        min-width: 100%; /* Ensure content does not overflow */
+        margin: 10px 0; /* Adjust spacing between items */
     }
 }
+
+
+

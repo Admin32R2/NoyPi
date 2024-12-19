@@ -75,11 +75,7 @@
 
 /* Responsive Styles for .About Section */
 @media (max-width: 768px) {
-    .About .background {
-        background-size: contain;
-        height: 80%;
-    }
-
+    
     .first_statement_About h1 {
         font-size: 28px; /* Adjust size for smaller screens */
         margin-top: 10%; /* Remove negative margin */
