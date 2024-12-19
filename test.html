@@ -3,30 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfect Section Scroll</title>
-  <link rel="stylesheet" href="css/index.css">
-  
+  <title>Order with Pop-Up and Options</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .Purchase.menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    #order-button {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .menu-items {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: none; /* Initially hidden */
+      z-index: 1000;
+    }
+
+    .menu-items li {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .menu-items li:hover {
+      background-color: #f1f1f1;
+    }
+
+    .menu-items a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Order details div styling */
+    #order-details {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: none; /* Initially hidden */
+    }
+  </style>
 </head>
 <body>
-   <!-- Navigation bar -->
-   <nav class="top_nav">
-    <a href="#main">Home</a>
-    <a href="#contacts">Contacts</a>
-    <a href="#about">About</a>
-</nav>
+  <div class="Purchase menu">
+    <a href="#" id="order-button" class="order">ORDER▼</a>
+    <ul class="menu-items hidden">
+      <li><a href="#" class="popup-trigger" data-popup="dinein-popup">Dine in</a></li>
+      <li><a href="#" class="popup-trigger" data-popup="takeout-popup">Take out</a></li>
+      <li><a href="#" class="popup-trigger" data-popup="reserve-popup">Reserve</a></li>
+    </ul>
+  </div>
 
-<!-- Sections -->
-<section id="main" class="Main">
-    <h1>Welcome to LNP!</h1>
-    <p>Taste the Philippines like never before!</p>
-</section>
-<section id="contacts" class="Contacts">
-    <h1>Contact Us</h1>
-    <p>Get in touch!</p>
-</section>
-<section id="about" class="About">
-    <h1>About Us</h1>
-    <p>Learn more about us!</p>
-</section>
+  <!-- Additional div to show order details -->
+  <div id="order-details" class="hidden">
+    <h3>Order Options</h3>
+    <p>Choose how you'd like to proceed with your order:</p>
+  </div>
+
+  <script>
+    const orderButton = document.getElementById('order-button');
+    const menuItems = document.querySelector('.menu-items');
+    const orderDetails = document.getElementById('order-details');
+
+    // Toggle visibility of menu items and order details
+    orderButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      menuItems.classList.toggle('hidden'); // Toggle menu visibility
+      orderDetails.classList.toggle('hidden'); // Toggle order details visibility
+    });
+  </script>
 </body>
 </html>
