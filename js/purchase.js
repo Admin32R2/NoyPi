@@ -4,43 +4,21 @@ const closeButtons = document.querySelectorAll('.close-btn');
 const popups = document.querySelectorAll('.popup');
 const purchaseLinks = document.querySelectorAll('.Purchase ul li a'); // Select the Dine in, Take out, and Reserve links
 
+// Selectors for menu items cycling
+const menuItems = document.querySelectorAll('.menu-item'); // Select menu divs
+const displayDiv = document.getElementById('menu-display');
+const btnPrev = document.getElementById('btn-prev');
+const btnNext = document.getElementById('btn-next');
+
+// Order button toggle
+const orderButton = document.getElementById('order-button');
+const menuList = document.querySelector('.menu-items');
+
+let currentIndex = 0; // Track current item index
+
 // Function to hide all pop-ups
 function hideAllPopups() {
     popups.forEach(popup => popup.classList.add('hidden'));
-    enableAllTriggers(); // Re-enable all triggers when pop-ups are hidden
-    enablePurchaseLinks(); // Re-enable the purchase links when pop-ups are hidden
-}
-
-// Disable all <a> tags (including purchase links)
-function disableAllTriggers() {
-    popupTriggers.forEach(trigger => {
-        trigger.classList.add('disabled');
-        trigger.style.pointerEvents = 'none'; // Disable clicks
-    });
-}
-
-// Disable the purchase links (Dine in, Take out, Reserve)
-function disablePurchaseLinks() {
-    purchaseLinks.forEach(link => {
-        link.classList.add('inactive'); // Add inactive class
-        link.style.pointerEvents = 'none'; // Disable clicks
-    });
-}
-
-// Re-enable all <a> tags (triggers and purchase links)
-function enableAllTriggers() {
-    popupTriggers.forEach(trigger => {
-        trigger.classList.remove('disabled');
-        trigger.style.pointerEvents = 'auto'; // Enable clicks
-    });
-}
-
-// Re-enable the purchase links
-function enablePurchaseLinks() {
-    purchaseLinks.forEach(link => {
-        link.classList.remove('inactive'); // Remove inactive class
-        link.style.pointerEvents = 'auto'; // Enable clicks
-    });
 }
 
 // Reset active state on all purchase links
@@ -54,14 +32,11 @@ function resetActiveLinks() {
 popupTriggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
         e.preventDefault(); // Prevent default link behavior
-        if (trigger.classList.contains('disabled')) return; // Ignore if disabled
         resetActiveLinks(); // Reset the active state on all links
         const targetPopupId = trigger.getAttribute('data-popup'); // Get the target pop-up ID
         const targetPopup = document.getElementById(targetPopupId);
         if (targetPopup) {
             targetPopup.classList.remove('hidden'); // Show the target pop-up
-            disableAllTriggers(); // Disable all triggers when pop-up is open
-            disablePurchaseLinks(); // Disable the purchase links when pop-up is open
             trigger.classList.add('active'); // Add active class to the clicked link
         }
     });
@@ -75,16 +50,14 @@ closeButtons.forEach(button => {
     });
 });
 
-
-
-
-/// Selectors
-const menuItems = document.querySelectorAll('.menu-item'); // Select menu divs
-const displayDiv = document.getElementById('menu-display');
-const btnPrev = document.getElementById('btn-prev');
-const btnNext = document.getElementById('btn-next');
-
-let currentIndex = 0; // Track current item index
+// Purchase links event listener
+purchaseLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default link behavior
+        resetActiveLinks(); // Reset the active state on all links
+        link.classList.add('active'); // Mark the clicked link as active
+    });
+});
 
 // Function to update the display with the current menu item
 function updateDisplay() {
@@ -92,7 +65,7 @@ function updateDisplay() {
     displayDiv.textContent = currentItem.textContent;
 }
 
-// Event listeners for buttons
+// Event listeners for next/previous buttons
 btnNext.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % menuItems.length; // Cycle forward
     updateDisplay();
@@ -103,7 +76,11 @@ btnPrev.addEventListener('click', () => {
     updateDisplay();
 });
 
-// Initial display update
+// Toggle menu list visibility when the order button is clicked
+orderButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    menuList.classList.toggle('hidden'); // Toggle visibility
+});
+
+// Initial display update for menu items cycling
 updateDisplay();
-
-

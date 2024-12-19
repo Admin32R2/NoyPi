@@ -19,7 +19,7 @@
 }
 
 .Purchase ul li {
-    margin: 125px;
+    margin: 0px;
     margin-top: 45px;
     padding: 0px;
     align-items: center;
@@ -142,3 +142,48 @@
     color: aqua;
 }
 
+
+/* Menu Styling */
+.menu {
+    position: absolute;
+    top: 100px; /* Adjust this to place it at the top */
+    right: 100px; /* Positions it at the top-right corner */
+    margin-top: 20px; /* Space from the top */
+    margin-right: 20px; /* Space from the right side */
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: black;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    
+  }
+  
+  /* Initially hide the menu items */
+.menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    width: 200px;
+    position: absolute;
+    top: calc(100% + 5px); /* Adjusted to position below the order button */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+  
+  /* When the 'hidden' class is added, the menu stays hidden */
+  .menu-items.hidden {
+    display: none;
+  }
+  
+  /* Show the menu when 'hidden' class is removed */
+  .menu-items:not(.hidden) {
+    display: block;
+  }
+
+  

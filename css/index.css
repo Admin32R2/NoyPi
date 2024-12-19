@@ -17,16 +17,43 @@
     position: relative;  /* Set parent to relative so child is positioned relative to it */
     width: 100%;         /* Example width */
     height: 100vh;       /* Full viewport height */
-
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
 }
+
+.Main h1 {
+    font-family: 'Lemon', sans-serif;
+    font-size: 125px; /* Default font size */
+    margin-top: 5%;
+    text-align: center;
+    letter-spacing: 15px;
+    color: rgb(10, 10, 10);
+    
+    
+   
+}
+
+.Main h2 {
+    font-family: 'Poppins';
+    font-size: 55px; /* Default font size */
+    text-align: center;
+    margin-top: -5%;
+    
+}
+
 .splice-text {
     position: absolute;  /* Make the child absolutely positioned */
-    top: -500px;           /* Position it from the top */
+    top: -650px;           /* Position it from the top */
     left: -450px;          /* Position it from the left */
     width: 100px;        /* Set a width for the child */
     height: 100px;       /* Set a height for the child */
 }
 
+  
 /* Media Query for Tablet Screens */
 @media (max-width: 1024px) {
     .splice-text {
@@ -58,20 +85,7 @@
     }
 }
 
-.Main h1 {
-    font-family: 'Lemon', sans-serif;
-    font-size: 75px; /* Default font size */
-    margin-top: 20%;
-    margin-left: -85%;
-    text-align: left;
-}
 
-.Main p {
-    font-family: 'Poppins';
-    font-size: 35px; /* Default font size */
-    margin-left: -80%;
-    text-align: left;
-}
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -142,6 +156,7 @@ section {
 @media (max-width: 768px) {
     .Main, .About, .Contacts {
         height: 100vh; /* Ensure full screen height */
+        width: 100vw;
     }
 
     .Contacts {

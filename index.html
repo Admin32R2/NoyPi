@@ -15,25 +15,23 @@
 
     
     
-    <!-- This is the code for the navigation buttons along with the login -->
     <div class="top_nav">
         <ul>
-            <li><a class="active default" href="#" data-target="home">Home</a></li>
-            <li><a href="#" data-target="contacts">Contacts</a></li>
-            <li><a href="#" data-target="about">About</a></li>
-            <li><a class="spaced" href="#login" class="login">Login</a></li>
+          <li><a class="active default" href="#" data-target="home">Home</a></li>
+          <li><a href="#" data-target="contacts">Contacts</a></li>
+          <li><a href="#" data-target="about">About</a></li>
+          <li><a class="spaced" href="#login">Login</a></li>
+      
+        
         </ul>
-    </div>
-
+      </div>
+    
     <!-- Code for the home page and this is section 1 -->
     <section class="Main" id="home">
         <!-- main contents -->
         <div class="Content" >
-            <h1>Welcome to LNP!</h1>
-            <p>Taste the Philippines!!!<br>
-                like never before<br>
-                where options are boundless...
-            </p> 
+            <h1>Welcome to <br> Lasang NoyPi!</h1>
+            <h2>"where every bite is a flavor journey"</h2>
         </div>
 
         <div class="background">
@@ -42,18 +40,39 @@
 
         <!-- code for the background test -->
         <div class="splice-text" data-text="Lasang NoyPi"></div>
-  
+        
+         <!-- Menu and Popup Buttons -->
+      <!--   <div class="menu purchase">
+            <a href="#" id="order-button" class="order">ORDER▼</a>
+            <div class="purchase">
+                <ul class="menu-items hidden "> -->
+                <!--  <li><a href="#" class="main-course">SPECIALTY</a></li>
+                    <li><a href="#" class="dessert">DESSERT</a></li>
+                    <li><a href="#" class="drinks">DRINKS</a></li> -->
+                  <!--   <li><a href="#" class="popup-trigger main-course" data-popup="dinein-popup">Dine in</a></li>
+                    <li><a href="#" class="popup-trigger dessert" data-popup="takeout-popup">Take out</a></li>
+                    <li><a href="#" class="popup-trigger drinks" data-popup="reserve-popup">Reserve</a></li>
+                </ul>
+            </div>
+        </div> -->
+
         <!-- code for the purchase buttons and the corresponding divs in them -->
-        <div class="Purchase">
-            <ul>
+        <div class="Purchase menu">
+            <a href="#" id="order-button" data-popup="payroll-popup" class="order popup-trigger">ORDER▼</a>
+            <ul class="menu-items hidden">
                 <li><a href="#" class="popup-trigger" data-popup="dinein-popup">Dine in</a></li>
                 <li><a href="#" class="popup-trigger" data-popup="takeout-popup">Take out</a></li>
                 <li><a href="#" class="popup-trigger" data-popup="reserve-popup">Reserve</a></li>
+                
             </ul>
         </div>
 
         <!-- Pop-ups divs and This is section 1 -->
          <!-- The code for the dine in purchase button -->
+        <div id="payroll-popup" class="hidden popup">
+            HELLo
+        </div>
+
         <div id="dinein-popup" class="popup hidden" >
             <div class="popup-content">
                 <button class="close-btn">X</button>
@@ -180,6 +199,7 @@
     <!-- Place JS file reference at the end -->
     <script src="js/nav.js"></script>
     <script src="js/purchase.js"></script>
+    <script src="js/order.js"></script>
 
 </body>
 </html>
