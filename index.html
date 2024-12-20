@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/purchase.css">
+    <link rel="stylesheet" href="css/orderstyle.css">
+
 </head>
 <body>
 
@@ -41,21 +43,6 @@
         <!-- code for the background test -->
         <div class="splice-text" data-text="Lasang NoyPi"></div>
         
-         <!-- Menu and Popup Buttons -->
-      <!--   <div class="menu purchase">
-            <a href="#" id="order-button" class="order">ORDER▼</a>
-            <div class="purchase">
-                <ul class="menu-items hidden "> -->
-                <!--  <li><a href="#" class="main-course">SPECIALTY</a></li>
-                    <li><a href="#" class="dessert">DESSERT</a></li>
-                    <li><a href="#" class="drinks">DRINKS</a></li> -->
-                  <!--   <li><a href="#" class="popup-trigger main-course" data-popup="dinein-popup">Dine in</a></li>
-                    <li><a href="#" class="popup-trigger dessert" data-popup="takeout-popup">Take out</a></li>
-                    <li><a href="#" class="popup-trigger drinks" data-popup="reserve-popup">Reserve</a></li>
-                </ul>
-            </div>
-        </div> -->
-
        <!-- Code for the purchase buttons and the corresponding divs in them -->
         <div class="Purchase menu">
             <a href="#" id="order-button" data-popup="payroll-popup" class="order popup-trigger">ORDER▼</a>
@@ -84,10 +71,47 @@
                         <button class="move-food-R-L" id="btn-next">&gt;</button>
                     </div>
                     <div class="Menu-options">
-                        <!-- Replace list with divs -->
-                        <div class="menu-item" data-popup="Adobo-popup">Adobo</div>
-                        <div class="menu-item" data-popup="Lechon-popup">Lechon</div>
-                        <div class="menu-item" data-popup="Crispy-Pata-popup">Crispy-Pata</div>
+                         <!-- Replace list with divs, add images inside each div -->
+                        <div class="menu-item">
+                            <img src="../images/PorkAdobo.png" alt="Pork Adobo" class="menu-item-img">
+                            <span></span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/lechon.jpg" alt="Lechon" class="menu-item-img">
+                            <span>Lechon</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/crispy-pata.jpg" alt="Crispy Pata" class="menu-item-img">
+                            <span>Crispy-Pata</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/pamcit-palatok.jpg" alt="Pamcit Palabok" class="menu-item-img">
+                            <span>Pamcit Palabok</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/bicol-express.jpg" alt="Bicol Express" class="menu-item-img">
+                            <span>Bicol Express</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/kare-kare.jpg" alt="Kare Kare" class="menu-item-img">
+                            <span>Kare Kare</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/pork-sisig.jpg" alt="Pork Sisig" class="menu-item-img">
+                            <span>Pork Sisig</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/beef-kaldereta.jpg" alt="Beef Kaldereta" class="menu-item-img">
+                            <span>Beef Kaldereta</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/sinangag.jpg" alt="Sinangag" class="menu-item-img">
+                            <span>Sinangag</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/plain-rice.jpg" alt="Plain Rice" class="menu-item-img">
+                            <span>Plain Rice</span>
+                        </div>
                     </div>
                     <!-- Display selected option here -->
                     <div class="menu-display" id="menu-display">Dine in</div>
@@ -96,21 +120,79 @@
             </div>
         </div>
 
-        <!-- The code for the purchase takeout button -->
-        <div id="dessert-popup" class="takeout popup hidden">
+        <!-- Dessert Pop-up -->
+        <div id="dessert-popup" class="popup hidden">
             <div class="popup-content">
                 <button class="close-btn">X</button>
-                <p>You selected Take Out.</p>
+                <div class="btn-food">
+                    <div class="button-container">
+                        <button class="move-food-L-R" id="btn-prev-dessert">&lt;</button>
+                        <button class="move-food-R-L" id="btn-next-dessert">&gt;</button>
+                    </div>
+                    <div class="Menu-options">
+                        <div class="menu-item">
+                            <img src="path/to/chocolate-cake.jpg" alt="Chocolate Cake" class="menu-item-img">
+                            <span>Chocolate Cake</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/fruit-salad.jpg" alt="Fruit Salad" class="menu-item-img">
+                            <span>Fruit Salad</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/panna-cotta.jpg" alt="Panna Cotta" class="menu-item-img">
+                            <span>Panna Cotta</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/tiramisu.jpg" alt="Tiramisu" class="menu-item-img">
+                            <span>Tiramisu</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/leche-flan.jpg" alt="Leche Flan" class="menu-item-img">
+                            <span>Leche Flan</span>
+                        </div>
+                    </div>
+                    <div class="menu-display" id="menu-display-dessert">Desserts</div>
+                </div>
             </div>
         </div>
+        
 
-        <!-- The code for the purchase reserve button -->
-        <div id="drinks-popup" class="reserve popup hidden">
+        <!-- Drinks Pop-up -->
+        <div id="drinks-popup" class="popup hidden">
             <div class="popup-content">
                 <button class="close-btn">X</button>
-                <p>You selected Reserve.</p>
+                <div class="btn-food">
+                    <div class="button-container">
+                        <button class="move-food-L-R" id="btn-prev-drinks">&lt;</button>
+                        <button class="move-food-R-L" id="btn-next-drinks">&gt;</button>
+                    </div>
+                    <div class="Menu-options">
+                        <div class="menu-item">
+                            <img src="path/to/coke.jpg" alt="Coke" class="menu-item-img">
+                            <span>Coke</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/sprite.jpg" alt="Sprite" class="menu-item-img">
+                            <span>Sprite</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/iced-tea.jpg" alt="Iced Tea" class="menu-item-img">
+                            <span>Iced Tea</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/lemonade.jpg" alt="Lemonade" class="menu-item-img">
+                            <span>Lemonade</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="path/to/water.jpg" alt="Water" class="menu-item-img">
+                            <span>Water</span>
+                        </div>
+                    </div>
+                    <div class="menu-display" id="menu-display-drinks">Drinks</div>
+                </div>
             </div>
         </div>
+        
     </section>
 
     <!-- This is the section code for the contacts -->
