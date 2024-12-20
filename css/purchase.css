@@ -2,7 +2,7 @@
 .payroll {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 9%;
     transform: translate(-50%, -50%);
     background: white;
     border: 1px solid #ccc;
@@ -13,7 +13,7 @@
 }
 
 .popup-content-payroll{
-    width: 250px;
+    width: 200px;
     height: 400px;
     background-color: #c4bfbf;
     display: flex;
@@ -117,7 +117,7 @@
 }
 
 .popup-content {
-    width: 950px;
+    width: 750px;
     height: 400px;
     background-color: #c4bfbf;
     display: flex;
@@ -148,7 +148,7 @@
 .popup {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 47.5%;
     transform: translate(-50%, -50%);
     background: white;
     border: 1px solid #ccc;
