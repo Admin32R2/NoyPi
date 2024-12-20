@@ -13,6 +13,7 @@ const btnNext = document.getElementById('btn-next');
 // Order button toggle
 const orderButton = document.getElementById('order-button');
 const menuList = document.querySelector('.menu-items');
+const payrollPopup = document.getElementById('payroll-popup');
 
 let currentIndex = 0; // Track current item index
 
@@ -21,7 +22,7 @@ function hideAllPopups() {
     popups.forEach(popup => popup.classList.add('hidden'));
 }
 
-// Reset active state on all purchase links
+// Function to reset active state on all purchase links
 function resetActiveLinks() {
     purchaseLinks.forEach(link => {
         link.classList.remove('active'); // Remove active class
@@ -47,6 +48,8 @@ closeButtons.forEach(button => {
     button.addEventListener('click', () => {
         hideAllPopups(); // Hide the pop-up
         resetActiveLinks(); // Remove active state from the links
+        menuList.classList.add('hidden'); // Ensure menu is hidden
+        payrollPopup.classList.add('hidden'); // Ensure payroll is hidden
     });
 });
 
@@ -76,10 +79,20 @@ btnPrev.addEventListener('click', () => {
     updateDisplay();
 });
 
-// Toggle menu list visibility when the order button is clicked
+// Toggle menu list visibility and sync payroll visibility
 orderButton.addEventListener('click', function (event) {
     event.preventDefault();
-    menuList.classList.toggle('hidden'); // Toggle visibility
+    const isMenuVisible = !menuList.classList.contains('hidden'); // Check current visibility
+
+    // Toggle menu visibility
+    menuList.classList.toggle('hidden');
+
+    // Toggle payroll visibility based on menu visibility
+    if (isMenuVisible) {
+        payrollPopup.classList.add('hidden'); // Hide payroll if menu is hidden
+    } else {
+        payrollPopup.classList.remove('hidden'); // Show payroll if menu is shown
+    }
 });
 
 // Initial display update for menu items cycling
