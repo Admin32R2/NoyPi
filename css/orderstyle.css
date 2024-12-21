@@ -1,22 +1,23 @@
 
 
 .menu-item-img {
-
-    height: 400px;
-    width: 800px;
+    
+    height: 360px;
+    width: 700px;
     object-fit: cover; /* Ensure the image fills the container */
     
-    margin-top: -3px;
+    margin-top: 7%;
     object-fit: contain;
 }
 
 .menu-item-img-dessert {
   
-    height: 400px;
-    width: 800px;
+  
+    height: 360px;
+    width: 700px;
     object-fit: cover; /* Ensure the image fills the container */
     
-    margin-top: -3px;
+    margin-top: 7%;
     object-fit: contain;
  
 }
@@ -24,18 +25,17 @@
 .menu-item-img-drinks {
    
     
-    height: 400px;
-    width: 800px;
+    height: 360px;
+    width: 700px;
     object-fit: cover; /* Ensure the image fills the container */
     
-    margin-top: -3px;
+    margin-top: 7%;
     object-fit: contain;
+ 
 }
 
 
-.menu-item span {
-    font-size: 16px;
-    font-weight: bold;
-}
+
+
 
 

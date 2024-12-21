@@ -57,7 +57,11 @@
         <!-- The code for the dine-in purchase button -->
         <div id="payroll-popup" class="hidden payroll">
             <div class="popup-content-payroll">
-              
+                <h3>Order Summary</h3>
+                <ul id="order-summary">
+                    <!-- Dynamic content -->
+                </ul>
+                <div>Total: <span id="total-price">0</span> PHP</div>
             </div>
         </div>
 
@@ -72,45 +76,95 @@
                     </div>
                     <div class="Menu-options">
                          <!-- Replace list with divs, add images inside each div -->
-                        <div class="menu-item">
-                            <img src="../images/main/PorkAdobo.png" alt="Pork Adobo" class="menu-item-img">
-                            <span></span>
+                        <!-- Menu Items -->
+                        <div class="menu-item" data-price="85">
+                            <img src="../images/main/PorkAdobo.png" alt="Assdobo-" class="menu-item-img">
+                            
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/main/Lechon.png" alt="Lechon" class="menu-item-img">
-                            <span></span>
+                        <div class="menu-item" data-price="135">
+                            <img src="/images/main/Lechon.png" alt="Lechon-" class="menu-item-img">
+                           
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/main/Crispy-Pata.png" alt="Crispy Pata" class="menu-item-img">
-                            <span></span>
+                        <div class="menu-item" data-price="125">
+                            <img src="/images/main/Crispy-Pata.png" alt="Crispy-Pata" class="menu-item-img">
+
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/main/Pancit Palabok.png" alt="Pancit Palabok" class="menu-item-img">
-                            <span></span>
+                        <div class="menu-item" data-price="75">
+                            <img src="/images/main/Pancit Palabok.png" alt="Pancit-Palabok" class="menu-item-img">
+                            
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/main/Kare-Kare.png" alt="Kare Kare" class="menu-item-img">
-                            <span></span>
+                        <div class="menu-item" data-price="85">
+                            <img src="/images/main/Kare-Kare.png" alt="Kare-Kare" class="menu-item-img">
+                          
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/main/Pork Sisig.png" alt="Pork Sisig" class="menu-item-img">
-                            <span></span>
+                        <div class="menu-item" data-price="125">
+                            <img src="/images/main/Pork Sisig.png" alt="Pork-Sisig" class="menu-item-img">
+                           
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/main/beef Kaldereta.png" alt="Beef Kaldereta" class="menu-item-img">
-                            <span></span>
+                        <div class="menu-item" data-price="150">
+                            <img src="/images/main/beef Kaldereta.png" alt="Beef-Kaldereta" class="menu-item-img">
+                           
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/main/Sinangag.png" alt="Sinangag" class="menu-item-img">
-                            <span></span>
+                        <div class="menu-item" data-price="89">
+                            <img src="/images/main/Sinangag.png" alt="Sinangag-" class="menu-item-img">
+                         
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/main/Plain Rice.png" alt="Plain Rice" class="menu-item-img">
-                            <span></span>
+                        <div class="menu-item" data-price="55">
+                            <img src="/images/main/Plain Rice.png" alt="Plain-Rice" class="menu-item-img">
+                        
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/main/Bicol Express.png" alt="Bicok Express" class="menu-item-img">
-                            <span></span>
+                        <div class="menu-item" data-price="79">
+                            <img src="/images/main/Bicol Express.png" alt="Bicok-Express" class="menu-item-img">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
                     </div>
                     <!-- Display selected option here -->
@@ -130,41 +184,77 @@
                         <button class="move-food-R-L" id="btn-next-dessert">&gt;</button>
                     </div>
                     <div class="Menu-options">
-                        <div class="menu-item">
-                            <img src="../images/Dessert/Biko.png" alt="" class="menu-item-img-dessert">
-                            <span></span>
+                        <div class="menu-item" data-price="89">
+                            <img src="../images/Dessert/Biko.png" alt="Biko-" class="menu-item-img-dessert">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/Dessert/Buko Pie.png" alt="" class="menu-item-img-dessert">
-                            <span></span>
+                        <div class="menu-item" data-price="55">
+                            <img src="/images/Dessert/Buko Pie.png" alt="Buko-Pie" class="menu-item-img-dessert">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/Dessert/Ginataang Bilo-bilo.png" alt="" class="menu-item-img-dessert">
-                            <span></span>
+                        <div class="menu-item" data-price="55">
+                            <img src="/images/Dessert/Ginataang Bilo-bilo.png" alt="Ginataang-Bilo-bilo" class="menu-item-img-dessert">
+                            < <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/Dessert/Halo Halo.png" alt="" class="menu-item-img-dessert">
-                            <span></span>
+                        <div class="menu-item" data-price="65">
+                            <img src="/images/Dessert/Halo Halo.png" alt="Halo-Halo" class="menu-item-img-dessert">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/Dessert/Leche Flan.png" alt="" class="menu-item-img-dessert">
-                            <span></span>
+                        <div class="menu-item" data-price="55">
+                            <img src="/images/Dessert/Leche Flan.png" alt="Leche-Flan" class="menu-item-img-dessert">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/Dessert/Maja Blanca.png" alt="" class="menu-item-img-dessert">
-                            <span></span>
+                        <div class="menu-item" data-price="55">
+                            <img src="/images/Dessert/Maja Blanca.png" alt="Maja-Blanca" class="menu-item-img-dessert">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/Dessert/Sans Rival.png" alt="" class="menu-item-img-dessert">
-                            <span></span>
+                        <div class="menu-item" data-price="65">
+                            <img src="/images/Dessert/Sans Rival.png" alt="Sans--Rival" class="menu-item-img-dessert">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/Dessert/Sapin Sapin.png" alt="" class="menu-item-img-dessert">
-                            <span></span>
+                        <div class="menu-item" data-price="89">
+                            <img src="/images/Dessert/Sapin Sapin.png" alt="Sapin-Sapin" class="menu-item-img-dessert">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/Dessert/Sorebetes.png" alt="" class="menu-item-img-dessert">
-                            <span></span>
+                        <div class="menu-item" data-price="25">
+                            <img src="/images/Dessert/Sorebetes.png" alt="Sorebetes" class="menu-item-img-dessert">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menu-display" id="menu-display-dessert">Desserts</div>
@@ -183,25 +273,45 @@
                         <button class="move-food-R-L" id="btn-next-drinks">&gt;</button>
                     </div>
                     <div class="Menu-options">
-                        <div class="menu-item">
-                            <img src="/images/drinks/Calamansi Juice.png" alt="" class="menu-item-img-drinks">
-                            <span></span>
+                        <div class="menu-item" data-price="65">
+                            <img src="/images/drinks/Calamansi Juice.png" alt="Calamansi-Juice" class="menu-item-img-drinks">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/drinks/Ginger Tea.png" alt="" class="menu-item-img-drinks">
-                            <span></span>
+                        <div class="menu-item" data-price="35">
+                            <img src="/images/drinks/Ginger Tea.png" alt="Ginger-Tea" class="menu-item-img-drinks">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/drinks/Guinumis.png" alt="" class="menu-item-img-drinks">
-                            <span></span>
+                        <div class="menu-item" data-price="55">
+                            <img src="/images/drinks/Guinumis.png" alt="Guinumis-" class="menu-item-img-drinks">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/drinks/Guyabano Juice.png" alt="" class="menu-item-img-drinks">
-                            <span></span>
+                        <div class="menu-item" data-price="55">
+                            <img src="/images/drinks/Guyabano Juice.png" alt="Guyabano-Juice" class="menu-item-img-drinks">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
-                        <div class="menu-item">
-                            <img src="/images/drinks/Mango Shake.png" alt="" class="menu-item-img-drinks">
-                            <span></span>
+                        <div class="menu-item" data-price="55">
+                            <img src="/images/drinks/Mango Shake.png" alt="Mango-Shake" class="menu-item-img-drinks">
+                            <div class="item-controls">
+                                <button class="subtract">-</button>
+                                <span class="quantity">0</span>
+                                <button class="add">+</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menu-display" id="menu-display-drinks">Drinks</div>
@@ -300,6 +410,8 @@
     <script src="js/nav.js"></script>
     <script src="js/purchase.js"></script>
     <script src="js/order.js"></script>
+    <script src="js/payroll.js"></script>
+
 
 </body>
 </html>
