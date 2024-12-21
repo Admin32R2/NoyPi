@@ -1,11 +1,35 @@
 
 
 .menu-item-img {
-    width: 100px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+
+    height: 400px;
+    width: 800px;
     object-fit: cover; /* Ensure the image fills the container */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    margin: 5px; /* Optional: Add space around the image */
+    
+    margin-top: -3px;
+    object-fit: contain;
+}
+
+.menu-item-img-dessert {
+  
+    height: 400px;
+    width: 800px;
+    object-fit: cover; /* Ensure the image fills the container */
+    
+    margin-top: -3px;
+    object-fit: contain;
+ 
+}
+
+.menu-item-img-drinks {
+   
+    
+    height: 400px;
+    width: 800px;
+    object-fit: cover; /* Ensure the image fills the container */
+    
+    margin-top: -3px;
+    object-fit: contain;
 }
 
 
@@ -13,3 +37,5 @@
     font-size: 16px;
     font-weight: bold;
 }
+
+
