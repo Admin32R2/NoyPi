@@ -117,7 +117,7 @@
 }
 
 /* For medium screens (tablets) */
-@media (min-width: 769px) and (max-width: 1080px )  {
+@media (min-width: 869px) and (max-width: 1080px )  {
 
     /* Navigation bar styling */
  .Purchase {
@@ -172,7 +172,7 @@
  }
 
 /* For small screens (landscape phones) */
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 868px) {
 
     
  /* Navigation bar styling */
@@ -229,7 +229,7 @@
 
 
 /* For extra small screens (portrait phones) */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .item-controls {
         margin-left: 20%; /* Center more effectively */
         margin-bottom: 3%;
@@ -251,223 +251,3 @@
 }
 
 
-.menu-display {
-    font-size: 1px;
-    font-weight: bold;
-    color: #f7efef;
-    text-align: center;
-    margin-top: 80px;
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-between; /* Align buttons to opposite ends */
-    align-items: center; /* Vertically center buttons */
-    width: 100%; /* Ensure it stretches across the container */
-    margin: 10px 0; /* Add some spacing above and below */
-   
-    
-}
-.move-food-L-R,
-.move-food-R-L {
-    position: fixed; /* Sticks the buttons to the viewport */
-    top: 50%; /* Align vertically centered */
-    transform: translateY(-50%); /* Adjust for exact center */
-    background-color: #ddd;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    z-index: 1000; /* Ensures it stays on top of everything */
-    border: none;
-    border-radius: 5px;
-}
-
-.move-food-L-R {
-    left: 20px; /* Stick to the far left of the screen */
-}
-
-.move-food-R-L {
-    right: 20px; /* Stick to the far right of the screen */
-}
-
-
-.close-btn {
-    font-size: 20px;
-    position: absolute;
-    right: 0;
-    top: 50%; /* Optional: vertical alignment */
-    transform: translateY(-700%); /* Optional: centers vertically */
-    margin-right: 5px;
-}
-
-.disabled {
-    opacity: 0.5; /* Optional: Make disabled links appear faded */
-    cursor: not-allowed; /* Change cursor to indicate the link is disabled */
-}
-
-.hidden {
-    display: none;
-}
-.popup-content {
-    width: 645px;
-    height: 400px;
-    background-color: #9fc640;
-    display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
-   
-     /* Prevent content clipping */
-}
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 47.5%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    padding: 5px;
-    align-content: center;
-}
-
-.popup .popup-content .dineIn h1{
-    font-size: 100px;
-    text-align: center;
-    font-family: 'Poppins';
-    color: aqua;
-}
-
-
-/* Menu Styling */
-.menu {
-    position: absolute;
-    top: 100px; /* Adjust this to place it at the top */
-    right: 100px; /* Positions it at the top-right corner */
-    margin-top: 20px; /* Space from the top */
-    margin-right: 20px; /* Space from the right side */
-  }
-  
-.menu a {
-    text-decoration: none;
-    color: black;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    
-  }
-  
-  /* Initially hide the menu items */
-.menu-items {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    width: 150px;
-    position: absolute;
-    top: calc(100% + 5px); /* Adjusted to position below the order button */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    
-  }
-
-  /* When the 'hidden' class is added, the menu stays hidden */
-  .menu-items.hidden {
-    display: none;
-  }
-  
-  /* Show the menu when 'hidden' class is removed */
-  .menu-items:not(.hidden) {
-    display: block;
-  }
-/* ///////////////////////////////////////////////////////// */
-@media (min-width: 1080px) and (max-width: 1300px ) {
-    .popup-content {
-        width: 537px;
-        height: 350px;
-    }
-
-    .popup .popup-content .dineIn h1 {
-        font-size: 80px;
-    }
-
-   
-    .move-food-L-R, .move-food-R-L {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    .menu a {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .menu {
-        top: 80px;
-        right: 80px;
-    }
-}
-  @media (min-width: 769px) and (max-width: 1080px ) {
-    .popup-content {
-        width: 420px;
-        height: 270px;
-    }
-
-    .popup .popup-content .dineIn h1 {
-        font-size: 80px;
-    }
-
-    .move-food-L-R, .move-food-R-L {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    .menu a {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .menu {
-        top: 80px;
-        right: 80px;
-    }
-}
-
-/* For small screens (phones) */
-@media (min-width: 480px) and (max-width: 768px) {
-    .popup-content {
-        margin-top: -25%;
-        width: 300px;
-        height: 250px;
-      
-    }
-
-    .popup  {
-      
-        background: none;
-   
-       
-    }
-
-
-
-    .move-food-L-R, .move-food-R-L {
-        font-size: 0.8rem;
-        padding: 6px 12px;
-    }
-
-    .menu a {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .menu {
-        top: 60px;
-        right: 60px;
-    }
-}
-
-
-  

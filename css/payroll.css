@@ -123,7 +123,7 @@
 }
 
 /* For screens 1024px and below (tablets and medium screens) */
-@media (min-width: 769px) and (max-width: 1080px )  {
+@media (min-width: 869px) and (max-width: 1080px )  {
     .payroll {
         position: fixed;
         top: 50%;
@@ -188,7 +188,7 @@
 }
 
 /* For screens 768px and below (phones and small tablets) */
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 868px) {
     .payroll {
         position: fixed;
         top: 85%;
