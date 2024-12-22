@@ -81,7 +81,7 @@
         max-height: 400px; /* Limit the height to 400px */
         overflow-y: auto; /* Enable vertical scrolling for overflow content */
       /*   background-color: #9fc640; */
-        background-color: #b80aa0;
+      background-color: #9fc640;
         display: flex;
         flex-direction: column; /* Ensure children stack vertically */
         justify-content: flex-start; /* Align items at the top */
@@ -142,7 +142,7 @@
         max-height: 400px; /* Limit the height to 400px */
         overflow-y: auto; /* Enable vertical scrolling for overflow content */
       /*   background-color: #9fc640; */
-        background-color: #c70707;
+      background-color: #9fc640;
         display: flex;
         flex-direction: column; /* Ensure children stack vertically */
         justify-content: flex-start; /* Align items at the top */
@@ -269,7 +269,7 @@
         width: 100px;
         max-height: 300px; /* Limit the height to 400px */
         overflow-y: auto; /* Enable vertical scrolling for overflow content */
-        background-color: #c4bfbf;
+        background-color: #9fc640;
         display: flex;
         flex-direction: column; /* Ensure children stack vertically */
         justify-content: flex-start; /* Align items at the top */
