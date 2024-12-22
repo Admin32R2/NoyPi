@@ -65,11 +65,11 @@
 @media (min-width: 1080px) and (max-width: 1300px) {
     .about-info {
         height: 55%;
-        background-color: #c92424;
+        background-color: #ffffff;
     }
 
     .statement_about-info p {
-        color: rgb(78, 14, 197);
+        color: rgb(0, 0, 0);
         font-size: 19px;
     }
 }
@@ -82,7 +82,7 @@
     }
 
     .statement_about-info p {
-        color: rgb(23, 175, 18);
+        color: rgb(0, 0, 0);
         font-size: 17px;
     }
 }
