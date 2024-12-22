@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Create a new list item if it doesn't exist
                 const li = document.createElement('li');
                 li.setAttribute('data-name', itemName);
-                li.innerHTML = `<div>${itemName}</div><div class="item-quantity">${quantity}</div> x ${price} PHP = <div class="item-total">${quantity * price}</div> PHP`;
+                li.innerHTML = `<div>${itemName}</div><div class="item-quantity">${quantity}</div> x ${price} PHP = <div class="item-total" style="color: black;">${quantity * price}</div> PHP`;
                 orderSummary.appendChild(li);
             }
         } else if (existingItem) {

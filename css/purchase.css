@@ -3,7 +3,7 @@
 .payroll {
     position: fixed;
     top: 50%;
-    left: 9%;
+    left: 10%;
     transform: translate(-50%, -50%);
     background: white;
     border: 1px solid #ccc;
@@ -13,11 +13,18 @@
     align-content: center;
 }
 
+.item-total {
+    color: red;
+    /* Access this in payroll js to change the color since you cannot access it through css or mybe skill issue I guess */
+}
+
+
 .popup-content-payroll {
-    width: 200px;
+    font-family: Poppins;
+    width: 185px;
     max-height: 400px; /* Limit the height to 400px */
     overflow-y: auto; /* Enable vertical scrolling for overflow content */
-    background-color: #c4bfbf;
+    background-color: #9fc640;
     display: flex;
     flex-direction: column; /* Ensure children stack vertically */
     justify-content: flex-start; /* Align items at the top */
@@ -40,7 +47,7 @@
     text-align: left; /* Align text to the left */
     font-size: 14px; /* Adjust font size */
     line-height: 1.5; /* Space between lines */
-    border-bottom: 1px solid #ddd; /* Optional: separator for better readability */
+    border-bottom: 1px solid #030303; /* Optional: separator for better readability */
     padding-bottom: 5px;
 }
 
@@ -59,22 +66,62 @@
 
 
 /* For screens 1024px and below (tablets and medium screens) */
-@media (max-width: 1024px) {
+@media (min-width:769)  {
     .payroll {
         position: fixed;
         top: 50%;
         left: 9%;
         transform: translate(-50%, -50%);
-        background: white;
+        background: rgb(138, 16, 16);
         border: 1px solid #ccc;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         z-index: 1000;
         padding: 5px;
         align-content: center;
     }
-
+    
+    .popup-content-payroll {
+        width: 200px;
+        max-height: 4000px; /* Limit the height to 400px */
+        overflow-y: auto; /* Enable vertical scrolling for overflow content */
+        background-color: #9fc640;
+        display: flex;
+        flex-direction: column; /* Ensure children stack vertically */
+        justify-content: flex-start; /* Align items at the top */
+        align-items: center; /* Center horizontally */
+        padding: 10px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    }
+    
+    #order-summary {
+        width: 100%; /* Ensure it spans the full width */
+        margin: 0;
+        padding: 0;
+        list-style: none; /* Remove bullets */
+    }
+    
     #order-summary li {
-        font-size: 12px; /* Smaller font for medium screens */
+        display: flex; /* Use flex to align name and price on the same line */
+        justify-content: space-between; /* Ensure name and price are spaced out */
+        margin-bottom: 10px; /* Add spacing between items */
+        text-align: left; /* Align text to the left */
+        font-size: 14px; /* Adjust font size */
+        line-height: 1.5; /* Space between lines */
+        border-bottom: 1px solid #ddd; /* Optional: separator for better readability */
+        padding-bottom: 5px;
+    }
+    
+    #order-summary li div {
+        flex: 1; /* Ensure both name and price take equal space */
+    }
+    
+    #order-summary li div:first-child {
+        font-weight: bold; /* Highlight the item name */
+    }
+    
+    #order-summary li div:last-child {
+        text-align: right; /* Align price to the right */
+        color: #747070; /* Different color for the price */
     }
 }
 
@@ -83,6 +130,68 @@
     .payroll {
         position: fixed;
         top: 50%;
+        left: 11%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        padding: 5px;
+        align-content: center;
+    }
+    
+    .popup-content-payroll {
+        width: 100px;
+        max-height: 300px; /* Limit the height to 400px */
+        overflow-y: auto; /* Enable vertical scrolling for overflow content */
+        background-color: #9fc640;
+        display: flex;
+        flex-direction: column; /* Ensure children stack vertically */
+        justify-content: flex-start; /* Align items at the top */
+        align-items: center; /* Center horizontally */
+        padding: 10px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    }
+    .popup-content-payroll h3 {
+        font-size: small;
+    }
+    #order-summary {
+        width: 100%; /* Ensure it spans the full width */
+        margin: 0;
+        padding: 0;
+        list-style: none; /* Remove bullets */
+    }
+    
+    #order-summary li {
+        display: flex; /* Use flex to align name and price on the same line */
+        justify-content: space-between; /* Ensure name and price are spaced out */
+        margin-bottom: 10px; /* Add spacing between items */
+        text-align: left; /* Align text to the left */
+        font-size: 10px; /* Adjust font size */
+        line-height: 1.5; /* Space between lines */
+        border-bottom: 1px solid #ddd; /* Optional: separator for better readability */
+        padding-bottom: 5px;
+    }
+    
+    #order-summary li div {
+        flex: 1; /* Ensure both name and price take equal space */
+    }
+    
+    #order-summary li div:first-child {
+        font-weight: bold; /* Highlight the item name */
+    }
+    
+    #order-summary li div:last-child {
+        text-align: right; /* Align price to the right */
+        color: #747070; /* Different color for the price */
+    }
+}
+
+/* For very small screens (portrait phones) */
+@media (max-width: 480px) {
+    .payroll {
+        position: fixed;
+        top: 50%;
         left: 9%;
         transform: translate(-50%, -50%);
         background: white;
@@ -92,61 +201,51 @@
         padding: 5px;
         align-content: center;
     }
-
+    
     .popup-content-payroll {
-        padding: 5px; /* Less padding for smaller screens */
+        width: 100px;
+        max-height: 300px; /* Limit the height to 400px */
+        overflow-y: auto; /* Enable vertical scrolling for overflow content */
+        background-color: #c4bfbf;
+        display: flex;
+        flex-direction: column; /* Ensure children stack vertically */
+        justify-content: flex-start; /* Align items at the top */
+        align-items: center; /* Center horizontally */
+        padding: 10px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
     }
-
+    .popup-content-payroll h3 {
+        font-size: small;
+    }
+    #order-summary {
+        width: 100%; /* Ensure it spans the full width */
+        margin: 0;
+        padding: 0;
+        list-style: none; /* Remove bullets */
+    }
+    
     #order-summary li {
-        font-size: 12px;
-        margin-bottom: 8px;
+        display: flex; /* Use flex to align name and price on the same line */
+        justify-content: space-between; /* Ensure name and price are spaced out */
+        margin-bottom: 10px; /* Add spacing between items */
+        text-align: left; /* Align text to the left */
+        font-size: 10px; /* Adjust font size */
+        line-height: 1.5; /* Space between lines */
+        border-bottom: 1px solid #ddd; /* Optional: separator for better readability */
+        padding-bottom: 5px;
     }
-
+    
     #order-summary li div {
-        flex: 1;
-        font-size: 12px;
+        flex: 1; /* Ensure both name and price take equal space */
     }
-
+    
     #order-summary li div:first-child {
-        font-weight: bold;
+        font-weight: bold; /* Highlight the item name */
     }
-
+    
     #order-summary li div:last-child {
-        text-align: right;
-        color: #747070;
-    }
-}
-
-/* For very small screens (portrait phones) */
-@media (max-width: 480px) {
-    .payroll {
-        width: 40%; /* Reduce width even further */
-        left: 0;
-        transform: none;
-        padding: 5px; /* Reduce padding to save space */
-    }
-
-    .popup-content-payroll {
-        padding: 5px; /* Keep padding minimal */
-    }
-
-    #order-summary li {
-        font-size: 8px; /* Even smaller font for very small screens */
-        margin-bottom: 4px; /* Less space between items */
-    }
-
-    #order-summary li div {
-        flex: 1;
-        font-size: 8px; /* Smaller font size for consistency */
-    }
-
-    #order-summary li div:first-child {
-        font-weight: bold;
-    }
-
-    #order-summary li div:last-child {
-        text-align: right;
-        color: #747070;
+        text-align: right; /* Align price to the right */
+        color: #747070; /* Different color for the price */
     }
 }
 
