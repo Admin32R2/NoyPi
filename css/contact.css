@@ -1,16 +1,17 @@
 .Contacts .background {
-    position: absolute; /* Removes it from the normal flow */
-            top: 100;
-            left: 0;
-            width: 100%; /* Full width of the parent */
-            height: 100%; /* Full height of the parent */
-            background-image: url('../images/Food-Culture-In-The-Philippines.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: -1; /* Push it behind the content */
-            opacity: 0.3;
+  position: absolute; /* Removes it from the normal flow */
+  top: 600px; /* Align to the top */
+  left: 0;
+  width: 100%; /* Full width of the parent */
+  height: 100vh; /* Full height of the viewport */
+  background-image: url('../images/Food-Culture-In-The-Philippines.jpg');
+  background-size: cover; /* Ensure it stretches */
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1; /* Push it behind the content */
+  opacity: 0.3;
 }
+
 .first_statement_Contacts h1 {
   font-family: Poppins, sans-serif;
   margin-top: 10%;
@@ -84,14 +85,21 @@ a:hover {
   text-decoration: underline;
 }
 
-@media (min-width: 1025px) and (max-width: 1080px) {
-  
+@media (min-width: 1080px) and (max-width: 1300px) {
+  .contact-info {
+    width: 55%;
+    height: 65%;
+  }
+
 }
 
 /* For responsive designs */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1080px) {
+
+ 
+
   .first_statement_Contacts h1 {
-    font-size: 4vw; /* Scales font size relative to viewport width */
+    font-size: 3vw; /* Scales font size relative to viewport width */
     line-height: 1.3;
     text-shadow:
       -1px -1px 0 rgb(255, 255, 255),
@@ -101,50 +109,141 @@ a:hover {
   }
 
   .Contacts .canvas {
-    height: auto; /* Prevent height increase */
-    width: 95%; /* Adjust width */
-    max-height: 500px; /* Prevent it from getting too tall */
-    padding: 15px 20px; /* Adjust padding */
-    font-size: 3vw; /* Scale font size based on viewport width */
+    background-color: #ffffff;
+    height: 65%;
+    width: 40%;
+    margin: auto; /* Center it */
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Ensure proper padding inside */
   }
 
-  .contact-info {
-    width: 90%; /* Use most of the screen */
-    font-size: 14px;
-    line-height: 1.4;
-  }
-
+  /* Contact Info Styling */
+.contact-info {
+  height: auto;
+  width: 60%;
+  background-color: #ffffff; /* White background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px 30px;
+  font-family: Arial, sans-serif;
+  color: #333; /* Dark text */
+  margin: 20px auto; /* Center horizontally */
+  line-height: 1; /* Add spacing between lines */
+  margin-bottom: 10%;
+}
   .info-container {
     flex-direction: column;
     align-items: center;
   }
 
   .business-info, .social-media {
-    margin: 20px 0;
+    margin: 2px 0;
   }
 
   .business-info h2, .social-media h3 {
     font-size: 18px;
+    
   }
 
   .business-info p, .social-media p {
+
     font-size: 14px;
+  }
+
+  .contact-info {
+    width: 55%;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 /* For smaller screens (mobile phones) */
-@media (max-width: 767px) {
-  .Contacts .background {
-    background-size: contain;
-    height: 100%;
+@media (min-width: 480px) and (max-width: 768px) {
+
+  .Contacts .canvas {
+    background-color: #ffffff;
+    height: 45%;
+    width: 10%;
+    margin: auto; /* Center it */
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Ensure proper padding inside */
   }
 
+  /* Contact Info Styling */
+.contact-info {
+  height: auto;
+  width: 10%;
+  background-color: #ffffff; /* White background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px 30px;
+  font-family: Arial, sans-serif;
+  color: #333; /* Dark text */
+  margin: 20px auto; /* Center horizontally */
+  line-height: 1; /* Add spacing between lines */
+  margin-bottom: 10%;
+}
+
+  .Contacts .canvas h1 {
+    font-size: 8vw; /* Font size shrinks based on screen width */
+    margin-top: 5%;
+  }
+
+  .Contacts .canvas p {
+    font-size: 5vw; /* Adjust paragraph size */
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+  .contact-info {
+    width: 55%;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For smaller screens (mobile phones) */
+@media (max-width: 480px){
+  
   .Contacts .canvas {
     height: auto; /* Prevent height increase */
     max-height: 400px; /* Prevent getting too tall on mobile */
     padding: 10px 15px;
     font-size: 5vw; /* Adjust font size for small screens */
   }
+
+  .Contacts .canvas {
+    background-color: #ffffff;
+    height: 45%;
+    width: 10%;
+    margin: auto; /* Center it */
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Ensure proper padding inside */
+  }
+
+  /* Contact Info Styling */
+.contact-info {
+  height: auto;
+  width: 30%;
+  background-color: #ffffff; /* White background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px 30px;
+  font-family: Arial, sans-serif;
+  color: #333; /* Dark text */
+  margin: 20px auto; /* Center horizontally */
+  line-height: 1; /* Add spacing between lines */
+  margin-bottom: 10%;
+}
 
   .Contacts .canvas h1 {
     font-size: 8vw; /* Font size shrinks based on screen width */
@@ -166,3 +265,4 @@ a:hover {
     align-items: center;
   }
 }
+
