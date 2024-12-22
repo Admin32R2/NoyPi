@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Login container */
+        .login-container {
+            background-color: #9fc640;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input fields */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        /* Password container for eye icon */
+        .password-container {
+            position: relative;
+            width: 100%;
+        }
+
+        input[type="password"] {
+            padding-right: 40px; /* Space for the eye icon */
+        }
+
+        /* Eye icon */
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Hint text */
+        .hint {
+            font-size: 14px;
+            color: #666;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            display: none; /* Initially hidden */
+        }
+
+        /* Submit button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive styling */
+        @media screen and (max-width: 480px) {
+            .login-container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" action="#" method="POST" onsubmit="handleLogin(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <div id="usernameHint" class="hint">Hint: Username is <strong>CSUAN</strong></div>
+
+            <label for="password">Password:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+            </div>
+            <div id="passwordHint" class="hint">Hint: Password is <strong>CSUANPROJECT</strong></div>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        // Show hints when inputs are focused
+        document.getElementById('username').addEventListener('focus', function() {
+            document.getElementById('usernameHint').style.display = 'block';
+        });
+
+        document.getElementById('password').addEventListener('focus', function() {
+            document.getElementById('passwordHint').style.display = 'block';
+        });
+
+        // Hide hints when inputs lose focus
+        document.getElementById('username').addEventListener('blur', function() {
+            document.getElementById('usernameHint').style.display = 'none';
+        });
+
+        document.getElementById('password').addEventListener('blur', function() {
+            document.getElementById('passwordHint').style.display = 'none';
+        });
+
+        // Handle password visibility toggle
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.querySelector('.toggle-password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.textContent = '🙈'; // Change to a "hidden" icon
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.textContent = '👁️'; // Change back to "eye" icon
+            }
+        }
+
+        // Handle login form submission
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === "CSUAN" && password === "CSUANPROJECT") {
+                window.location.href = 'index.html'; // Redirect to index.html
+            } else {
+                alert('Invalid credentials!');
+            }
+        }
+    </script>
+
+</body>
+</html>
