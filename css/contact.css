@@ -13,8 +13,8 @@
 }
 .first_statement_Contacts h1 {
   font-family: Poppins, sans-serif;
-  margin-top: 0;
-  font-size: 40px; /* Default size */
+  margin-top: 10%;
+  font-size: 30px; /* Default size */
   color: rgb(0, 0, 0); /* Black text color */
   text-align: center;
   text-shadow:
@@ -46,7 +46,8 @@
   font-family: Arial, sans-serif;
   color: #333; /* Dark text */
   margin: 20px auto; /* Center horizontally */
-  line-height: 1.6; /* Add spacing between lines */
+  line-height: 1; /* Add spacing between lines */
+  margin-bottom: 10%;
 }
 
 /* Containers and Sections */
@@ -83,64 +84,85 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+@media (min-width: 1025px) and (max-width: 1080px) {
   
+}
+
+/* For responsive designs */
+@media (min-width: 768px) and (max-width: 1024px) {
   .first_statement_Contacts h1 {
-      font-size: 20px; /* Reduce size for mobile */
-      line-height: 1.3; /* Ensure readability */
-      text-shadow:
-          -1px -1px 0 rgb(255, 255, 255),
-           1px -1px 0 rgb(255, 255, 255),
-          -1px  1px 0 rgb(255, 255, 255),
-           1px  1px 0 rgb(255, 255, 255); /* Adjust for smaller font */
+    font-size: 4vw; /* Scales font size relative to viewport width */
+    line-height: 1.3;
+    text-shadow:
+      -1px -1px 0 rgb(255, 255, 255),
+      1px -1px 0 rgb(255, 255, 255),
+      -1px 1px 0 rgb(255, 255, 255),
+      1px 1px 0 rgb(255, 255, 255); /* Adjust for smaller font */
   }
 
   .Contacts .canvas {
-      height: auto; /* Adjust height dynamically */
-      width: 95%; /* Increase width for better fit */
-      padding: 15px 20px; /* Adjust padding */
+    height: auto; /* Prevent height increase */
+    width: 95%; /* Adjust width */
+    max-height: 500px; /* Prevent it from getting too tall */
+    padding: 15px 20px; /* Adjust padding */
+    font-size: 3vw; /* Scale font size based on viewport width */
   }
 
   .contact-info {
-      width: 90%; /* Use most of the screen */
-      font-size: 14px; /* Adjust text size */
-      line-height: 1.4; /* Tighten line spacing */
+    width: 90%; /* Use most of the screen */
+    font-size: 14px;
+    line-height: 1.4;
   }
 
   .info-container {
-      flex-direction: column; /* Stack sections vertically */
-      align-items: center; /* Center aligned */
+    flex-direction: column;
+    align-items: center;
   }
 
   .business-info, .social-media {
-      margin: 20px 0; /* Increase spacing between sections */
+    margin: 20px 0;
   }
 
   .business-info h2, .social-media h3 {
-      font-size: 18px; /* Adjust heading size */
+    font-size: 18px;
   }
 
   .business-info p, .social-media p {
-      font-size: 14px; /* Adjust paragraph size */
+    font-size: 14px;
   }
 }
 
-/* For even smaller screens (mobile phones) */
-@media (max-width: 480px) {
+/* For smaller screens (mobile phones) */
+@media (max-width: 767px) {
   .Contacts .background {
-    background-size: contain; /* Scale background */
-    height: 100%; /* Adjust for smaller screens */
-}
+    background-size: contain;
+    height: 100%;
+  }
+
+  .Contacts .canvas {
+    height: auto; /* Prevent height increase */
+    max-height: 400px; /* Prevent getting too tall on mobile */
+    padding: 10px 15px;
+    font-size: 5vw; /* Adjust font size for small screens */
+  }
 
   .Contacts .canvas h1 {
-      font-size: 35px; /* Further reduce font size */
-      margin-top: 5%; /* Adjust top margin */
+    font-size: 8vw; /* Font size shrinks based on screen width */
+    margin-top: 5%;
   }
 
   .Contacts .canvas p {
-      font-size: 18px; /* Further reduce font size */
-      margin-top: 5%; /* Adjust top margin */
-      margin-bottom: 10%; /* Adjust bottom margin */
+    font-size: 5vw; /* Adjust paragraph size */
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+  .contact-info {
+    width: 95%;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: center;
   }
 }

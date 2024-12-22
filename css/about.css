@@ -30,9 +30,9 @@
 
 .first_statement_About h2{
     font-family: Poppins;
-   margin-top: -1%;
+   margin-top: 1%;
    margin-bottom: 1%;
-   font-size: 30px;
+   font-size: 10px;
    color: rgb(0, 0, 0);              /* Text color */
     text-align: center;        /* Center-align the text */
     text-shadow: 
@@ -69,8 +69,101 @@
     font-family: Poppins;
     color: black;
     font-size: 25px;
-    margin-top: 2%;
+    margin-top: 5%;
     margin-bottom: 5%;
+}
+
+/* For screens between 1025px and 1080px */
+@media (min-width: 1025px) and (max-width: 1080px) {
+    .first_statement_About h1 {
+        font-size: clamp(28px, 5vw, 36px); /* Scales with screen size */
+        margin-top: 5%;  /* Adjust margin for better spacing */
+        text-shadow: 
+            -1px -1px 0 rgb(255, 255, 255), 
+             1px -1px 0 rgb(255, 255, 255), 
+            -1px  1px 0 rgb(255, 255, 255), 
+             1px  1px 0 rgb(255, 255, 255);
+    }
+
+    .first_statement_About h2 {
+        font-size: clamp(16px, 4vw, 24px); /* Scales with screen size */
+        margin: 4% 0; /* Adjust margin for better spacing */
+        line-height: 1.4;
+    }
+
+    .about-info {
+        width: 85%; /* Adjust width for medium screens */
+        height: auto;
+        padding: 18px 25px;
+        font-size: clamp(14px, 3vw, 18px); /* Dynamic font scaling */
+        line-height: 1.6; /* Prevent text overlap */
+    }
+
+    .about_info-container {
+        flex-direction: row; /* Horizontal layout for medium screens */
+        justify-content: space-between;
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    .statement_about-info p {
+        font-size: clamp(14px, 3vw, 18px); /* Match font size with .about-info */
+        line-height: 1.8; /* Ensure readability */
+        margin: 4% 0;
+    }
+}
+
+/* For screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    .first_statement_About h1 {
+        font-size: clamp(20px, 5vw, 28px); /* Scales with screen size */
+        margin-top: 10%; /* Remove negative margin */
+        line-height: 1.2; /* Add spacing between lines */
+        text-shadow: 
+            -1px -1px 0 rgb(255, 255, 255), 
+             1px -1px 0 rgb(255, 255, 255), 
+            -1px  1px 0 rgb(255, 255, 255), 
+             1px  1px 0 rgb(255, 255, 255);
+    }
+
+    .first_statement_About h2 {
+        font-size: clamp(14px, 4vw, 20px); /* Scales with screen size */
+        margin: 5% 0; /* Standardize margins */
+        line-height: 1.3; /* Add line spacing */
+    }
+
+    .about-info {
+        width: 90%; 
+        height: auto; 
+        padding: 15px 20px; 
+        font-size: clamp(12px, 3vw, 16px); /* Scales dynamically */
+        line-height: 1.5; /* Prevent text overlap */
+    }
+
+    .about_info-container {
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .statement_about-info p {
+        font-size: clamp(12px, 3vw, 16px); /* Match font size with .about-info */
+        line-height: 1.6; /* Ensure readability */
+        word-spacing: 0.05em; /* Prevent letter crowding */
+        margin: 5% 0; 
+    }
+}
+
+/* Optional: Dynamic Font Scaling */
+.first_statement_About h1 {
+    font-size: clamp(24px, 5vw, 40px); /* Scales with screen size */
+}
+
+.first_statement_About h2 {
+    font-size: clamp(18px, 4vw, 30px);
+}
+
+.statement_about-info p {
+    font-size: clamp(14px, 3vw, 25px);
 }
 
 /* Responsive Styles for .About Section */

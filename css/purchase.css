@@ -58,6 +58,100 @@
 }
 
 
+/* For screens 1024px and below (tablets and medium screens) */
+@media (max-width: 1024px) {
+    .payroll {
+        position: fixed;
+        top: 50%;
+        left: 9%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        padding: 5px;
+        align-content: center;
+    }
+
+    #order-summary li {
+        font-size: 12px; /* Smaller font for medium screens */
+    }
+}
+
+/* For screens 768px and below (phones and small tablets) */
+@media (max-width: 768px) {
+    .payroll {
+        position: fixed;
+        top: 50%;
+        left: 9%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        padding: 5px;
+        align-content: center;
+    }
+
+    .popup-content-payroll {
+        padding: 5px; /* Less padding for smaller screens */
+    }
+
+    #order-summary li {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    #order-summary li div {
+        flex: 1;
+        font-size: 12px;
+    }
+
+    #order-summary li div:first-child {
+        font-weight: bold;
+    }
+
+    #order-summary li div:last-child {
+        text-align: right;
+        color: #747070;
+    }
+}
+
+/* For very small screens (portrait phones) */
+@media (max-width: 480px) {
+    .payroll {
+        width: 40%; /* Reduce width even further */
+        left: 0;
+        transform: none;
+        padding: 5px; /* Reduce padding to save space */
+    }
+
+    .popup-content-payroll {
+        padding: 5px; /* Keep padding minimal */
+    }
+
+    #order-summary li {
+        font-size: 8px; /* Even smaller font for very small screens */
+        margin-bottom: 4px; /* Less space between items */
+    }
+
+    #order-summary li div {
+        flex: 1;
+        font-size: 8px; /* Smaller font size for consistency */
+    }
+
+    #order-summary li div:first-child {
+        font-weight: bold;
+    }
+
+    #order-summary li div:last-child {
+        text-align: right;
+        color: #747070;
+    }
+}
+
+
+
 .item-controls {
     margin-left: 45%;
     margin-bottom: 6%;
@@ -115,8 +209,68 @@
     background-color: #000000;
 }
 
+/* Responsive styles */
+
+/* For medium screens (tablets) */
+@media (max-width: 1024px) {
+    .item-controls {
+        margin-left: 40%; /* Adjust placement for smaller screens */
+        margin-bottom: 5%;
+    }
+
+    .Purchase ul li a {
+        font-size: 1.4rem; /* Reduce font size */
+        padding: 8px 40px; /* Smaller padding */
+    }
+}
+
+/* For small screens (landscape phones) */
+@media (max-width: 768px) {
+    .item-controls {
+        margin-left: 30%; /* Adjust for narrower screens */
+        margin-bottom: 4%;
+    }
+
+    .Purchase ul {
+        justify-content: flex-start; /* Align items to the left */
+        padding: 0 10px; /* Add padding to the edges */
+    }
+
+    .Purchase ul li {
+        margin-top: 30px; /* Reduce spacing between items */
+    }
+
+    .Purchase ul li a {
+        font-size: 1.2rem; /* Smaller font size */
+        padding: 8px 30px; /* Compact padding */
+    }
+}
+
+/* For extra small screens (portrait phones) */
+@media (max-width: 480px) {
+    .item-controls {
+        margin-left: 20%; /* Center more effectively */
+        margin-bottom: 3%;
+    }
+
+    .Purchase ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .Purchase ul li {
+        margin-top: 20px; /* Tighten vertical spacing */
+    }
+
+    .Purchase ul li a {
+        font-size: 1rem; /* Reduce font size further */
+        padding: 6px 20px; /* Smaller padding */
+    }
+}
+
 .menu-item {
     display: none; /* Keep them hidden visually */
+    
     
 }
 
@@ -162,7 +316,7 @@
 .popup-content {
     width: 750px;
     height: 400px;
-    background-color: #c4bfbf;
+    background-color: #9fc640;
     display: flex;
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
@@ -253,4 +407,87 @@
     display: block;
   }
 
+  @media (max-width: 1024px) {
+    .popup-content {
+        width: 600px;
+        height: 350px;
+    }
+
+    .popup .popup-content .dineIn h1 {
+        font-size: 80px;
+    }
+
+    .move-food-L-R, .move-food-R-L {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .menu {
+        top: 80px;
+        right: 80px;
+    }
+}
+
+/* For small screens (phones) */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 450px;
+        height: 300px;
+    }
+
+    .popup .popup-content .dineIn h1 {
+        font-size: 60px;
+    }
+
+    .move-food-L-R, .move-food-R-L {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .menu {
+        top: 60px;
+        right: 60px;
+    }
+}
+
+/* For extra small screens (portrait phones) */
+@media (max-width: 480px) {
+    .popup-content {
+        width: 300px;
+        height: 250px;
+    }
+
+    .popup .popup-content .dineIn h1 {
+        font-size: 40px;
+    }
+
+    .move-food-L-R, .move-food-R-L {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    .menu a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .menu {
+        top: 50px;
+        right: 50px;
+    }
+
+    .menu-items {
+        width: 150px;
+    }
+}
   

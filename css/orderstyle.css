@@ -1,41 +1,31 @@
-
-
-.menu-item-img {
-    
-    height: 360px;
-    width: 700px;
-    object-fit: cover; /* Ensure the image fills the container */
-    
-    margin-top: 7%;
-    object-fit: contain;
-}
-
-.menu-item-img-dessert {
-  
-  
-    height: 360px;
-    width: 700px;
-    object-fit: cover; /* Ensure the image fills the container */
-    
-    margin-top: 7%;
-    object-fit: contain;
- 
-}
-
+/* General styles for larger screens */
+.menu-item-img, 
+.menu-item-img-dessert, 
 .menu-item-img-drinks {
-   
-    
     height: 360px;
     width: 700px;
-    object-fit: cover; /* Ensure the image fills the container */
-    
+    object-fit: contain; /* Ensure the image is fully visible */
     margin-top: 7%;
-    object-fit: contain;
- 
 }
 
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+    .menu-item-img, 
+    .menu-item-img-dessert, 
+    .menu-item-img-drinks {
+        height: 240px; /* Adjust height for tablets */
+        width: 100%; /* Make width responsive */
+        max-width: 90%; /* Add some margin for better fitting */
+        margin-top: 5%;
+    }
+}
 
-
-
-
-
+@media (max-width: 480px) {
+    .menu-item-img, 
+    .menu-item-img-dessert, 
+    .menu-item-img-drinks {
+        height: 180px; /* Further reduce height for smaller screens */
+        width: 100%; /* Full width for smaller devices */
+        margin-top: 5%;
+    }
+}

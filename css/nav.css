@@ -21,6 +21,7 @@
   display: flex;
   justify-content: center;
   background-color: #9fc640;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 /* List item styling */
@@ -56,12 +57,23 @@
   color: rgb(0, 0, 0);
 }
 
+/* Responsive styles for screens from 1366px to 1024px */
+@media (max-width: 1366px) and (min-width: 1025px) {
+  .top_nav ul {
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  }
+  
+  .top_nav ul li a {
+    padding: 12px 40px; /* Adjust padding */
+    font-size: 18px; /* Slightly smaller font */
+  }
 
+  .top_nav ul li a.spaced {
+    margin-left: 0; /* Remove large margin on smaller screens */
+  }
+}
 
-
-
-
-/* Responsive styles */
+/* Responsive styles for screens 1024px and below */
 @media (max-width: 1024px) {
   .top_nav ul {
       flex-wrap: wrap; /* Allows items to wrap on smaller screens */
@@ -77,10 +89,11 @@
   }
 }
 
-/* Responsive styles */
+/* Responsive styles for screens 768px and below */
 @media (max-width: 768px) {
   .top_nav {
-      height: 50px; /* Reduce overall height */
+      height: auto; /* Remove fixed height */
+      padding: 10px 0; /* Adjust padding for smaller screens */
   }
 
   .top_nav ul {

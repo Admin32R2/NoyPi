@@ -37,7 +37,7 @@
    
 }
 
-.Main h2 {
+.Main p {
     font-family: 'Poppins';
     font-size: 55px; /* Default font size */
     text-align: center;
@@ -45,50 +45,34 @@
     
 }
 
-.splice-text {
-    position: absolute;  /* Make the child absolutely positioned */
-    top: -650px;           /* Position it from the top */
-    left: -450px;          /* Position it from the left */
-    width: 100px;        /* Set a width for the child */
-    height: 100px;       /* Set a height for the child */
-}
+
 
   
-/* Media Query for Tablet Screens */
-@media (max-width: 1024px) {
-    .splice-text {
-        position: absolute;
-        top: -300px;          /* Adjust position for tablet screens */
-        left: -300px;         /* Adjust position for tablet screens */
-        width: 80px;          /* Adjust width for tablet screens */
-        height: 80px;         /* Adjust height for tablet screens */
-    }
-}
 
-/* Media Query for Phone Screens */
-@media (max-width: 768px) {
-    .splice-text {
-        top: -100px;          /* Adjust position for phone screens */
-        left: -150px;         /* Adjust position for phone screens */
-        width: 60px;          /* Adjust width for phone screens */
-        height: 60px;         /* Adjust height for phone screens */
-    }
-}
 
-/* Media Query for Smaller Phone Screens */
-@media (max-width: 480px) {
-    .splice-text {
-        top: -50px;           /* Adjust position for smaller phones */
-        left: -50px;          /* Adjust position for smaller phones */
-        width: 50px;          /* Adjust width for smaller phones */
-        height: 50px;         /* Adjust height for smaller phones */
+
+
+@media (min-width: 1025px) and (max-width: 1080px) {
+    /* Styles for screens between 1025px and 1080px */
+    .Main h1 {
+        font-size: 70px; /* Reduce font size for smaller screens */
+        margin-top: 10%; /* Adjust top margin for better fit */
+        margin-left: 0; /* Center the title */
+        text-align: center; /* Center the text for smaller screens */
+    }
+
+    .Main p {
+        font-size: 600px; /* Reduce font size */
+        margin-left: 0; /* Remove left offset for smaller screens */
+        text-align: center; /* Center-align text */
+        margin-top: 10%; /* Adjust margin top to give breathing space */
+        margin-bottom: 10%; /* Add some bottom margin */
     }
 }
 
 
+@media (min-width: 768px) and (max-width: 1024px) {
 
-/* Responsive styles */
-@media (max-width: 768px) {
     .Main h1 {
         font-size: 50px; /* Reduce font size for smaller screens */
         margin-top: 10%; /* Adjust top margin for better fit */
@@ -97,7 +81,24 @@
     }
 
     .Main p {
-        font-size: 20px; /* Reduce font size */
+        font-size: 30px; /* Reduce font size */
+        margin-left: 0; /* Remove left offset for smaller screens */
+        text-align: center; /* Center-align text */
+        margin-top: 10%; /* Adjust margin top to give breathing space */
+        margin-bottom: 10%; /* Add some bottom margin */
+    }
+}
+/* Responsive styles */
+@media (min-width: 480px) and (max-width: 768px) {
+    .Main h1 {
+        font-size: 50px; /* Reduce font size for smaller screens */
+        margin-top: 10%; /* Adjust top margin for better fit */
+        margin-left: 0; /* Center the title */
+        text-align: center; /* Center the text for smaller screens */
+    }
+
+    .Main p {
+        font-size: 10px; /* Reduce font size */
         margin-left: 0; /* Remove left offset for smaller screens */
         text-align: center; /* Center-align text */
         margin-top: 10%; /* Adjust margin top to give breathing space */
@@ -113,7 +114,7 @@
     }
 
     .Main p {
-        font-size: 18px; /* Further reduce font size */
+        font-size: 10px; /* Further reduce font size */
         margin-top: 5%; /* Adjust top margin */
         margin-bottom: 10%; /* Adjust bottom margin */
     }
@@ -152,19 +153,75 @@ section {
     scroll-snap-align: start; /* For precise snapping */
 }
 
+/* For screens between 1025px and 1080px */
+@media (min-width: 1025px) and (max-width: 1080px) {
+    .Main, .About, .Contacts {
+        height: 100vh; /* Ensure full screen height */
+        width: 100vw; /* Full width of the screen */
+        overflow: hidden; /* Hide any content that overflows */
+    }
+
+    .Contacts, .About {
+        display: flex; /* Use flexbox for centering content */
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+    }
+
+    /* Ensure the content within sections is centered and fully occupies the screen */
+    .Main h1, .Main p, 
+    .About .first_statement_About h1, .About .first_statement_About h2, 
+    .Contacts .first_statement_Contacts h1 {
+        margin: 0;
+        text-align: center; /* Center text for smaller screens */
+        font-size: 24px;  /* Adjust font size as needed */
+    }
+
+    /* Adjust canvas or content containers to fit */
+    .canvas, .contact-info, .about-info {
+        height: auto; /* Allow height to adjust based on content */
+        width: 95%; /* Slightly less than full width */
+        margin: 0;
+        padding: 15px;
+        overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    }
+
+    .info-container, .about_info-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .business-info, .social-media {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+}
+
 /* Specific adjustments for smaller screens */
 @media (max-width: 768px) {
     .Main, .About, .Contacts {
         height: 100vh; /* Ensure full screen height */
         width: 100vw;
+        overflow: hidden; /* Hide any content that overflows */
     }
 
     .Contacts {
         height: 100vh; /* Ensure full screen height */
+        display: flex; /* Ensure it uses flexbox */
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
     }
 
     .About {
         height: 100vh; /* Ensure full screen height */
+        display: flex; /* Ensure it uses flexbox */
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
     }
 
     /* Ensure the content within sections is centered and fully occupies the screen */
@@ -178,10 +235,11 @@ section {
 
     /* Adjust canvas or content containers to fit smaller screens */
     .canvas, .contact-info, .about-info {
-        height: 100%;  /* Take up the full screen height */
+        height: auto;  /* Allow height to adjust based on content */
         width: 100%;  /* Full width of the screen */
         margin: 0;  /* Remove margins to ensure no gaps */
         padding: 10px;  /* Optional: Add some padding for aesthetics */
+        overflow-y: auto; /* Allow vertical scrolling if content overflows */
     }
 
     /* Adjust other elements for mobile */
@@ -200,4 +258,100 @@ section {
 }
 
 
+/* For screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    .Main, .About, .Contacts {
+        height: 100vh; /* Ensure full screen height */
+        width: 100vw; /* Full width of the screen */
+        overflow: hidden; /* Hide any content that overflows */
+    }
 
+    .Contacts, .About {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+    }
+
+    /* Ensure the content within sections is centered and fully occupies the screen */
+    .Main h1, .Main p, 
+    .About .first_statement_About h1, .About .first_statement_About h2, 
+    .Contacts .first_statement_Contacts h1 {
+        margin: 0;
+        text-align: center;
+        font-size: 18px;  /* Adjust font size for smaller screens */
+    }
+
+    /* Adjust canvas or content containers to fit smaller screens */
+    .canvas, .contact-info, .about-info {
+        height: auto; /* Allow height to adjust based on content */
+        width: 90%; /* Use most of the available screen width */
+        margin: 0;
+        padding: 10px;
+        overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    }
+
+    .info-container, .about_info-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .business-info, .social-media {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+.splice-text {
+    position: absolute;  /* Make the child absolutely positioned */
+    top: -650px;           /* Position it from the top */
+    left: -450px;          /* Position it from the left */
+    width: 100px;        /* Set a width for the child */
+    height: 100px;       /* Set a height for the child */
+}
+
+@media (min-width: 1025px) and (max-width: 1080px) {
+    /* Styles for screens between 1025px and 1080px */
+    .splice-text {
+        position: absolute;
+        top: -300px;          /* Adjust position for tablet screens */
+        left: -300px;         /* Adjust position for tablet screens */
+        width: 80px;          /* Adjust width for tablet screens */
+        height: 80px;         /* Adjust height for tablet screens */
+    }
+}
+
+/* Media Query for Tablet Screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .splice-text {
+        position: absolute;
+        top: -300px;          /* Adjust position for tablet screens */
+        left: -300px;         /* Adjust position for tablet screens */
+        width: 80px;          /* Adjust width for tablet screens */
+        height: 80px;         /* Adjust height for tablet screens */
+    }
+}
+
+/* Media Query for Phone Screens */
+@media (min-width: 480px) and (max-width: 768px) {
+    .splice-text {
+        top: -100px;          /* Adjust position for phone screens */
+        left: -150px;         /* Adjust position for phone screens */
+        width: 60px;          /* Adjust width for phone screens */
+        height: 60px;         /* Adjust height for phone screens */
+    }
+}
+
+/* Media Query for Smaller Phone Screens */
+@media (max-width: 480px) {
+    .splice-text {
+        top: -50px;           /* Adjust position for smaller phones */
+        left: -50px;          /* Adjust position for smaller phones */
+        width: 50px;          /* Adjust width for smaller phones */
+        height: 50px;         /* Adjust height for smaller phones */
+    }
+}
