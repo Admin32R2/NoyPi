@@ -107,7 +107,7 @@
 }
 
 /* For even smaller screens (mobile phones) */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .Main h1 {
         font-size: 35px; /* Further reduce font size */
         margin-top: 5%; /* Adjust top margin */

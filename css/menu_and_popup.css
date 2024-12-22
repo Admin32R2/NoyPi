@@ -131,6 +131,15 @@
   }
 /* ///////////////////////////////////////////////////////// */
 @media (min-width: 1080px) and (max-width: 1300px ) {
+    .close-btn {
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        top: 57%; /* Optional: vertical alignment */
+        transform: translateY(-700%); /* Optional: centers vertically */
+        margin-right: 5px;
+    }
+
     .popup-content {
         width: 537px;
         height: 350px;
@@ -157,6 +166,16 @@
     }
 }
   @media (min-width: 869px) and (max-width: 1080px ) {
+
+    .close-btn {
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        top: 74%; /* Optional: vertical alignment */
+        transform: translateY(-700%); /* Optional: centers vertically */
+        margin-right: 5px;
+    }
+
     .popup-content {
         width: 420px;
         height: 270px;
@@ -184,10 +203,23 @@
 
 /* For small screens (phones) */
 @media (min-width: 580px) and (max-width: 868px) {
+
+    .item-controls {
+        margin-top: -7%;
+    }
+    .close-btn {
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        top: 99%; /* Optional: vertical alignment */
+        transform: translateY(-700%); /* Optional: centers vertically */
+        margin-right: 5px;
+    }
+
     .popup-content {
         margin-top: -25%;
         width: 300px;
-        height: 250px;
+        height: 200px;
       
     }
 
@@ -197,12 +229,10 @@
    
        
     }
-
-
-
     .move-food-L-R, .move-food-R-L {
+       
         font-size: 0.8rem;
-        padding: 6px 12px;
+        padding: 3px 6px;
     }
 
     .menu a {
@@ -217,10 +247,25 @@
 }
 
 @media (max-width: 580px) {
+
+    .item-controls {
+        margin-top: -7%;
+        margin-left: 40%;
+    }
+    .close-btn {
+        font-size: 15px;
+        position: absolute;
+        right: 0;
+        top: 50%; /* Optional: vertical alignment */
+        transform: translateY(-700%); /* Optional: centers vertically */
+        margin-right: 5px;
+    }
+
+
     .popup-content {
-        margin-top: -25%;
+        margin-top: -50%;
         width: 275px;
-        height: 250px;
+        height: 200px;
         
       
     }
@@ -234,7 +279,7 @@
 
     .move-food-L-R, .move-food-R-L {
         font-size: 0.8rem;
-        padding: 6px 12px;
+        padding: 3px 6px;
     }
 
     .menu a {

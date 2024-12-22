@@ -14,7 +14,7 @@
         height: 300px; /* Adjust height for tablets */
         width: 100%; /* Make width responsive */
         max-width: 100%; /* Add some margin for better fitting */
-        margin-top: 5%;
+        margin-top: 8%;
     }
 }
 
@@ -25,7 +25,7 @@
         height: 235px; /* Adjust height for tablets */
         width: 100%; /* Make width responsive */
         max-width: 100%; /* Add some margin for better fitting */
-        margin-top: 8%;
+        margin-top: 14%;
     }
 }
 /* Responsive styles for smaller devices */
@@ -36,8 +36,9 @@
         height: 200px; /* Adjust height for tablets */
         width: 160%; /* Make width responsive */
         max-width: 95%; /* Add some margin for better fitting */
-        margin-top: 13%;
-    margin-left: 2%; 
+        margin-top: 12%;
+          margin-left: 2%; 
+        
     }
 }
 
