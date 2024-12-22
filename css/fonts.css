@@ -1,4 +1,4 @@
-/* General Reset */
+/* This is where custom downloaded fonts are loaded in and used along with the styling of the background splice effect */
 @font-face {
     font-family: 'CustomFont'; /* Match this name to font-family usage */
     src: url("/maragsa-font_john-david-maza_150620/Maragsâ.otf") format('opentype'); /* Correct file path */

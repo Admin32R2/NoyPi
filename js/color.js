@@ -1,3 +1,7 @@
+/* Currently this doesn't do anything because idk js man but this was suppose
+ to change div colors but I ditched it since it counter smy color scheme anyways */
+
+
 const popupContent = document.getElementById('popup-content');
 const menuItems = document.querySelectorAll('.menu-item');
 const btnPrev = document.getElementById('btn-prev-drinks');

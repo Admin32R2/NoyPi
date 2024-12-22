@@ -1,5 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* This code checks the navigation buttons and from the divs in which to select to show or hide  */
+/* I know redundant to the index js but it was a just in case code something changes  */
 const navLinks = document.querySelectorAll('.top_nav a');
 // Add click event listener to each link
 navLinks.forEach(link => link.addEventListener('click', toggleActiveLink01));
