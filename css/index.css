@@ -71,7 +71,7 @@
 }
 
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1080px) {
 
     .Main h1 {
         font-size: 50px; /* Reduce font size for smaller screens */

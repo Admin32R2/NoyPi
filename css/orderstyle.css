@@ -7,25 +7,38 @@
     object-fit: contain; /* Ensure the image is fully visible */
     margin-top: 7%;
 }
-
-/* Responsive styles for smaller devices */
-@media (max-width: 768px) {
+@media (min-width: 1080px) and (max-width: 1300px ) {
     .menu-item-img, 
     .menu-item-img-dessert, 
     .menu-item-img-drinks {
-        height: 240px; /* Adjust height for tablets */
+        height: 300px; /* Adjust height for tablets */
         width: 100%; /* Make width responsive */
-        max-width: 90%; /* Add some margin for better fitting */
+        max-width: 100%; /* Add some margin for better fitting */
         margin-top: 5%;
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 768px) and (max-width: 1080px ) {
     .menu-item-img, 
     .menu-item-img-dessert, 
     .menu-item-img-drinks {
-        height: 180px; /* Further reduce height for smaller screens */
-        width: 100%; /* Full width for smaller devices */
-        margin-top: 5%;
+        height: 235px; /* Adjust height for tablets */
+        width: 100%; /* Make width responsive */
+        max-width: 100%; /* Add some margin for better fitting */
+        margin-top: 8%;
     }
 }
+/* Responsive styles for smaller devices */
+@media (min-width: 480px) and (max-width: 768px) {
+    .menu-item-img, 
+    .menu-item-img-dessert, 
+    .menu-item-img-drinks {
+        height: 200px; /* Adjust height for tablets */
+        width: 160%; /* Make width responsive */
+        max-width: 95%; /* Add some margin for better fitting */
+        margin-top: 13%;
+    margin-left: 2%; 
+    }
+}
+
+

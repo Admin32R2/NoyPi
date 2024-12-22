@@ -1,5 +1,5 @@
 // Select all pop-ups, triggers, close buttons, and the specific purchase links
-const popupTriggers = document.querySelectorAll('.popup-trigger');
+const popupTriggers = document.querySelectorAll('.popup-trigger a h1');
 const closeButtons = document.querySelectorAll('.close-btn');
 const popups = document.querySelectorAll('.popup');
 const purchaseLinks = document.querySelectorAll('.Purchase ul li a'); // Select the Dine in, Take out, and Reserve links
